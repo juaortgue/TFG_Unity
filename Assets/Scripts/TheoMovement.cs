@@ -4,57 +4,94 @@ using UnityEngine;
 
 public class TheoMovement : MonoBehaviour
 {
-    public float runSpeed=8;
-    public float jumSpeed=7;
+    public float runSpeed = 8;
+    public float jumSpeed = 7;
     Rigidbody2D rb2D;
     public bool betterJump;
     public float fallMultiplier = 0.5f;
-    public float lowJumpMultiplier=1f;
+    public float lowJumpMultiplier = 1f;
     public SpriteRenderer spriteRenderer;
     public Animator animator;
+    public int life;
+    private float nextCollision;
+    private float timeThreshold;
     void Start()
     {
+        nextCollision = 0f;
+        timeThreshold = 2f;
         rb2D = GetComponent<Rigidbody2D>();
+        Debug.Log(this.gameObject.layer);
     }
 
     void FixedUpdate()
     {
-        if(Input.GetKey("d")){
+        Move();
+    }
+
+    void Move()
+    {
+        if (Input.GetKey("d"))
+        {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
             spriteRenderer.flipX = true;
             animator.SetBool("run", true);
         }
-        else if(Input.GetKey("a")){
+        else if (Input.GetKey("a"))
+        {
             rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
             spriteRenderer.flipX = false;
             animator.SetBool("run", true);
-        }else{
+        }
+        else
+        {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("run", false);
         }
-        if(Input.GetKey("space") && CheckGround.isGrounded){
+        if (Input.GetKey("space") && CheckGround.isGrounded)
+        {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
             animator.SetBool("run", false);
         }
-        if(CheckGround.isGrounded){
+        if (CheckGround.isGrounded)
+        {
             animator.SetBool("jump", false);
-        }else{
+        }
+        else
+        {
             animator.SetBool("jump", true);
             animator.SetBool("run", false);
         }
-        if(betterJump){
-            if(rb2D.velocity.y<0){
-                rb2D.velocity += Vector2.up*Physics2D.gravity.y*fallMultiplier*Time.deltaTime;
+        if (betterJump)
+        {
+            if (rb2D.velocity.y < 0)
+            {
+                rb2D.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
             }
-            if(rb2D.velocity.y>0 && !Input.GetKey("space")){
-                rb2D.velocity += Vector2.up*Physics2D.gravity.y*lowJumpMultiplier*Time.deltaTime;
+            if (rb2D.velocity.y > 0 && !Input.GetKey("space"))
+            {
+                rb2D.velocity += Vector2.up * Physics2D.gravity.y * lowJumpMultiplier * Time.deltaTime;
 
             }
         }
     }
-     void Update()
+    void Update()
     {
-        
+        if (life <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+        nextCollision += Time.deltaTime;
+
     }
-    
+  
+
+    void playerHit(int amount)
+    {
+
+
+        life -= amount;
+        nextCollision = 0f;
+        Debug.Log("ME DIOOO");
+
+    }
 }

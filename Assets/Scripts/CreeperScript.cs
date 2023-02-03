@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreeperScript : MonoBehaviour
-{
+{Renderer myRenderer;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -12,9 +12,10 @@ public class CreeperScript : MonoBehaviour
             if (other.transform.CompareTag("Player"))
             {
                 Destroy(other.gameObject);
-
+                this.gameObject.layer=-1;
             }
         }
 
     }
+   
 }
