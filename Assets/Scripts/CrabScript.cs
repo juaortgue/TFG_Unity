@@ -21,14 +21,8 @@ public class CrabScript : MonoBehaviour
         speed = speed*-1;
         this.transform.localScale  = new Vector2(this.transform.localScale.x*-1, this.transform.localScale.y);
     }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Player")){
-            Debug.Log("Le pego al jugador");
-            var player = other.gameObject.GetComponent<TheoMovement>();
-            player.life-=1;
-        }
-    }
+    
+
 
 
 }

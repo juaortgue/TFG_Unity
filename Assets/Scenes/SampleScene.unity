@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6516826}
   - component: {fileID: 6516827}
+  - component: {fileID: 6516828}
   m_Layer: 0
   m_Name: DAY - SEA
   m_TagString: Untagged
@@ -207,6 +208,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6516828
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86e985f339bc7044eb432f6d4a340221, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &27227605
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +325,7 @@ GameObject:
   - component: {fileID: 30327871}
   - component: {fileID: 30327870}
   - component: {fileID: 30327869}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Coin (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,8 +600,8 @@ GameObject:
   - component: {fileID: 124283901}
   - component: {fileID: 124283900}
   - component: {fileID: 124283903}
-  - component: {fileID: 124283902}
-  m_Layer: 3
+  - component: {fileID: 124283904}
+  m_Layer: 7
   m_Name: Crab1
   m_TagString: Crab
   m_Icon: {fileID: 0}
@@ -652,6 +673,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 843042304}
+  - {fileID: 165917348}
   m_Father: {fileID: 1786702466}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -688,32 +710,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
---- !u!61 &124283902
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124283897}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.03331399, y: -0.09994191}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 1.0666667}
-    newSize: {x: 0.7, y: 0.53333336}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1201625, y: 0.866783}
-  m_EdgeRadius: 0
 --- !u!50 &124283903
 Rigidbody2D:
   serializedVersion: 4
@@ -729,12 +725,38 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &124283904
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124283897}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03065896, y: -0.083216965}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4, y: 1.0666667}
+    newSize: {x: 0.7, y: 0.53333336}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.86565924, y: 0.8476747}
+  m_EdgeRadius: 0
 --- !u!1 &131702852
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +881,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &165917347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 165917348}
+  - component: {fileID: 165917349}
+  m_Layer: 0
+  m_Name: BoxCollider
+  m_TagString: Crab
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &165917348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165917347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 124283899}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &165917349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165917347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03503871, y: -0.083216965}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8423257, y: 0.83356607}
+  m_EdgeRadius: 0
 --- !u!1 &178898349
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +1037,7 @@ GameObject:
   - component: {fileID: 180576915}
   - component: {fileID: 180576916}
   - component: {fileID: 180576917}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Theo
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1024,7 +1104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180576910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.67, y: -0.03, z: 0}
+  m_LocalPosition: {x: -6.67, y: -0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1073,6 +1153,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 180576912}
   animator: {fileID: 180576916}
   life: 3
+  invincibilityTime: 3
 --- !u!95 &180576916
 Animator:
   serializedVersion: 4
@@ -1481,7 +1562,7 @@ GameObject:
   - component: {fileID: 291296686}
   - component: {fileID: 291296685}
   - component: {fileID: 291296684}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Coin (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1793,7 +1874,7 @@ GameObject:
   - component: {fileID: 380186847}
   - component: {fileID: 380186849}
   - component: {fileID: 380186848}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Collected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2003,7 +2084,7 @@ GameObject:
   - component: {fileID: 385640700}
   - component: {fileID: 385640702}
   - component: {fileID: 385640701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CheckGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,7 +2157,7 @@ GameObject:
   - component: {fileID: 402666815}
   - component: {fileID: 402666814}
   - component: {fileID: 402666813}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Coin (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2220,7 +2301,7 @@ GameObject:
   - component: {fileID: 424927681}
   - component: {fileID: 424927683}
   - component: {fileID: 424927682}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Collected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3795,7 +3876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 843042304}
   - component: {fileID: 843042305}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: GrounDetect
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -4400,7 +4481,7 @@ GameObject:
   - component: {fileID: 1075239881}
   - component: {fileID: 1075239880}
   - component: {fileID: 1075239879}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Coin (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4710,7 +4791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1123371727}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9402,7 +9483,7 @@ GameObject:
   - component: {fileID: 1218173748}
   - component: {fileID: 1218173750}
   - component: {fileID: 1218173749}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Collected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10402,7 +10483,7 @@ GameObject:
   - component: {fileID: 1562450853}
   - component: {fileID: 1562450855}
   - component: {fileID: 1562450854}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Collected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10509,7 +10590,7 @@ GameObject:
   - component: {fileID: 1567127872}
   - component: {fileID: 1567127875}
   - component: {fileID: 1567127876}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10863,7 +10944,7 @@ GameObject:
   - component: {fileID: 1759879931}
   - component: {fileID: 1759879930}
   - component: {fileID: 1759879929}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Coin (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11248,7 +11329,7 @@ GameObject:
   - component: {fileID: 1849562059}
   - component: {fileID: 1849562061}
   - component: {fileID: 1849562060}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Collected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11929,7 +12010,7 @@ GameObject:
   - component: {fileID: 2103991680}
   - component: {fileID: 2103991679}
   - component: {fileID: 2103991678}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Collected
   m_TagString: Untagged
   m_Icon: {fileID: 0}

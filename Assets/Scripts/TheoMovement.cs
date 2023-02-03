@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,15 +13,17 @@ public class TheoMovement : MonoBehaviour
     public float lowJumpMultiplier = 1f;
     public SpriteRenderer spriteRenderer;
     public Animator animator;
-    public int life;
+    public int life=1;
     private float nextCollision;
-    private float timeThreshold;
+    private bool invencible = false;
+    public float invincibilityTime = 3f;
+    private SoundManager soundManager;
     void Start()
     {
         nextCollision = 0f;
-        timeThreshold = 2f;
         rb2D = GetComponent<Rigidbody2D>();
-        Debug.Log(this.gameObject.layer);
+        soundManager = FindObjectOfType<SoundManager>();
+
     }
 
     void FixedUpdate()
@@ -75,23 +78,55 @@ public class TheoMovement : MonoBehaviour
         }
     }
     void Update()
-    {
-        if (life <= 0)
+    {   
+        if (CheckLife())
         {
-            Destroy(this.gameObject);
+            Die();
+            
         }
         nextCollision += Time.deltaTime;
 
     }
-  
 
-    void playerHit(int amount)
+    private bool CheckLife()
+    {
+       return life<=0;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
     {
 
+        if (!invencible)
+        {
+            if (other.transform.CompareTag("Crab"))
+            {
 
+                TakeDamage(1);
+                StartCoroutine(Invulnerability());
+            }
+        }
+
+    }
+    IEnumerator Invulnerability()
+    {
+        invencible = true;
+        yield return new WaitForSeconds(invincibilityTime);
+        invencible = false;
+    }
+    IEnumerator DieInvulnerability()
+    {
+        yield return new WaitForSeconds(2);
+    }
+    void TakeDamage(int amount)
+    {
         life -= amount;
-        nextCollision = 0f;
-        Debug.Log("ME DIOOO");
+        
 
+    }
+    void Die()
+    {        
+        soundManager.selectAudio(0, 0.3f);
+        animator.SetBool("die", true);
+        StartCoroutine(DieInvulnerability());
     }
 }
