@@ -13,13 +13,16 @@ public class TheoMovement : MonoBehaviour
     public float lowJumpMultiplier = 1f;
     public SpriteRenderer spriteRenderer;
     public Animator animator;
-    public int life=1;
+    private int life=3;
     private float nextCollision;
     private bool invencible = false;
     public float invincibilityTime = 3f;
     private SoundManager soundManager;
+    public GameObject[] Hearts;
+
     void Start()
     {
+        life=Hearts.Length;
         nextCollision = 0f;
         rb2D = GetComponent<Rigidbody2D>();
         soundManager = FindObjectOfType<SoundManager>();
@@ -120,7 +123,14 @@ public class TheoMovement : MonoBehaviour
     void TakeDamage(int amount)
     {
         life -= amount;
-        
+        soundManager.selectAudio(1, 3f);
+        if(life<1){
+            Destroy(Hearts[0].gameObject);
+        }else if(life<2){
+            Destroy(Hearts[1].gameObject);
+        }else if(life<3){
+            Destroy(Hearts[2].gameObject);
+        }
 
     }
     void Die()
