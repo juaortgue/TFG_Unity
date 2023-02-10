@@ -70,7 +70,6 @@ public class TheoMovement : MonoBehaviour
         }
         else if(Math.Abs(rb2D.velocity.y)<0.1)
         {
-            Debug.Log(rb2D.velocity.y);
             animator.SetBool("jump", true);
             animator.SetBool("run", false);
         }
@@ -106,6 +105,7 @@ public class TheoMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
+
         if (!invencible)
         {
             if (other.transform.CompareTag("Crab"))
@@ -129,6 +129,7 @@ public class TheoMovement : MonoBehaviour
     }
     void TakeDamage(int amount)
     {
+        Debug.Log("Hace daño");
         
         life -= amount;
         soundManager.selectAudio(1, 3f);

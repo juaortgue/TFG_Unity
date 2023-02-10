@@ -15,7 +15,7 @@ public class CrabScript : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(IsFacingRight());
+        
         if(IsFacingRight()){
             //Move right
             rb.velocity = new Vector2(speed, 0f);
@@ -34,7 +34,7 @@ public class CrabScript : MonoBehaviour
     private bool IsFacingRight(){
         return transform.localScale.x>Mathf.Epsilon;;
     }
-
+    
 
     
     

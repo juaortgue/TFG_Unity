@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreeperScript : MonoBehaviour
-{Renderer myRenderer;
+{
+    Renderer myRenderer;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
