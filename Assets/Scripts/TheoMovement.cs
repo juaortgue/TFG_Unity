@@ -105,12 +105,13 @@ public class TheoMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-
+        Debug.Log("entra");
         if (!invencible)
         {
+            Debug.Log("entra2");
             if (other.transform.CompareTag("Crab"))
             {
-
+Debug.Log("entra3");
                 TakeDamage(1);
                 StartCoroutine(Invulnerability());
             }
