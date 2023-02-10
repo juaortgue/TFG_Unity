@@ -6,11 +6,9 @@ public class SoundManager : MonoBehaviour
 {
    [SerializeField] private AudioClip[] audios;
    private AudioSource controlAudio;
-   private SoundManager soundManager;
 
    private void Awake(){
         controlAudio = GetComponent<AudioSource>();
-        soundManager = FindObjectOfType<SoundManager>();
    }
    public void selectAudio(int index, float volume){
     controlAudio.PlayOneShot(audios[index], volume);

@@ -5,24 +5,42 @@ using UnityEngine;
 public class CrabScript : MonoBehaviour
 {
     private Rigidbody2D rb;
+    BoxCollider2D bc;
     public float speed;
     void Start()
     {
-        Debug.Log("Capa del cangrejo:"+ this.gameObject.layer);
+        rb = GetComponent<Rigidbody2D>();
+        bc = GetComponent<BoxCollider2D>();
     }
+
     void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-speed, rb.velocity.y);
+        Debug.Log(IsFacingRight());
+        if(IsFacingRight()){
+            //Move right
+            rb.velocity = new Vector2(speed, 0f);
+        }else{
+            //Move left
+            rb.velocity = new Vector2(-speed, 0f);
 
+        }
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        speed = speed*-1;
-        this.transform.localScale  = new Vector2(this.transform.localScale.x*-1, this.transform.localScale.y);
+        //Turn
+        transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), transform.localScale.y);
+
     }
+    private bool IsFacingRight(){
+        return transform.localScale.x>Mathf.Epsilon;;
+    }
+
+
     
-
-
-
+    
 }
+   
+
+
+
+

@@ -13,7 +13,7 @@ public class TheoMovement : MonoBehaviour
     public float lowJumpMultiplier = 1f;
     public SpriteRenderer spriteRenderer;
     public Animator animator;
-    private int life=3;
+    private int life = 3;
     private float nextCollision;
     private bool invencible = false;
     public float invincibilityTime = 3f;
@@ -22,7 +22,7 @@ public class TheoMovement : MonoBehaviour
 
     void Start()
     {
-        life=Hearts.Length;
+        life = Hearts.Length;
         nextCollision = 0f;
         rb2D = GetComponent<Rigidbody2D>();
         soundManager = FindObjectOfType<SoundManager>();
@@ -32,6 +32,7 @@ public class TheoMovement : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        Jump();
     }
 
     void Move()
@@ -53,6 +54,11 @@ public class TheoMovement : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("run", false);
         }
+        
+        
+    }
+    void Jump()
+    {
         if (Input.GetKey("space") && CheckGround.isGrounded)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
@@ -62,8 +68,9 @@ public class TheoMovement : MonoBehaviour
         {
             animator.SetBool("jump", false);
         }
-        else
+        else if(Math.Abs(rb2D.velocity.y)<0.1)
         {
+            Debug.Log(rb2D.velocity.y);
             animator.SetBool("jump", true);
             animator.SetBool("run", false);
         }
@@ -81,11 +88,11 @@ public class TheoMovement : MonoBehaviour
         }
     }
     void Update()
-    {   
+    {
         if (CheckLife())
         {
             Die();
-            
+
         }
         nextCollision += Time.deltaTime;
 
@@ -93,7 +100,7 @@ public class TheoMovement : MonoBehaviour
 
     private bool CheckLife()
     {
-       return life<=0;
+        return life <= 0;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -122,19 +129,25 @@ public class TheoMovement : MonoBehaviour
     }
     void TakeDamage(int amount)
     {
+        
         life -= amount;
         soundManager.selectAudio(1, 3f);
-        if(life<1){
+        if (life < 1)
+        {
             Destroy(Hearts[0].gameObject);
-        }else if(life<2){
+        }
+        else if (life < 2)
+        {
             Destroy(Hearts[1].gameObject);
-        }else if(life<3){
+        }
+        else if (life < 3)
+        {
             Destroy(Hearts[2].gameObject);
         }
 
     }
     void Die()
-    {        
+    {
         soundManager.selectAudio(0, 0.3f);
         animator.SetBool("die", true);
         StartCoroutine(DieInvulnerability());
