@@ -14,7 +14,8 @@ public class CrabScript : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        Debug.Log(bc.ToString());
         
         if(IsFacingRight()){
             //Move right
@@ -28,7 +29,10 @@ public class CrabScript : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         //Turn
+        
         transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), transform.localScale.y);
+        
+        
 
     }
     private bool IsFacingRight(){

@@ -13,7 +13,6 @@ public class CreeperScript : MonoBehaviour
             if (other.transform.CompareTag("Player"))
             {
                 Destroy(other.gameObject);
-                this.gameObject.layer=-1;
             }
         }
 
