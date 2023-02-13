@@ -728,7 +728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1210,9 +1210,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1547900130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017d55130fb421d42822114f23e28ea1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f21bfd2891e9c2419b5eb89c973d539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 936495923}
+  - {fileID: 1355667595}
+  - {fileID: 194828278}
+  - {fileID: 1047991172}
 --- !u!1 &2093194236
 GameObject:
   m_ObjectHideFlags: 0
