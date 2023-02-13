@@ -15,7 +15,6 @@ public class CrabScript : MonoBehaviour
 
     void Update()
     {   
-        Debug.Log(bc.ToString());
         
         if(IsFacingRight()){
             //Move right

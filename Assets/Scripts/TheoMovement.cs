@@ -127,7 +127,6 @@ public class TheoMovement : MonoBehaviour
     }
     void TakeDamage(int amount)
     {
-        Debug.Log("Hace daño");
         
         life -= amount;
         soundManager.selectAudio(1, 3f);
