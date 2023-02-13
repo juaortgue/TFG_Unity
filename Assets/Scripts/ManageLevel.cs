@@ -7,8 +7,12 @@ public class ManageLevel : MonoBehaviour
 {
 
     public Button[] buttons;
+    private SoundManager soundManager;
+
     void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
+        
         for (int i = 0; i < buttons.Length; i++)
         {
             Debug.Log("boton = " + i);
@@ -19,10 +23,11 @@ public class ManageLevel : MonoBehaviour
                 buttons[i].interactable = false;
             }
         }
+        
     }
     public void ChangeLevel(int number)
     {
-
+        soundManager.selectAudio(1,1f);
         SceneManager.LoadScene(number);
 
     }

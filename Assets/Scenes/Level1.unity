@@ -21132,6 +21132,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f35fb8cf45f5aaf4fb8b122f2d76f899, type: 3}
   - {fileID: 8300000, guid: 7a28c1b716e6d55459ec924ba2764302, type: 3}
   - {fileID: 8300000, guid: 80e3cc0c77dd9de44a1e698e2bd2caae, type: 3}
+  - {fileID: 8300000, guid: a132c3018550c0e4b9d0545c805d5fd0, type: 3}
 --- !u!82 &1825401546
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23406,6 +23407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017d55130fb421d42822114f23e28ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 1
 --- !u!1 &2077363706
 GameObject:
   m_ObjectHideFlags: 0
