@@ -20,7 +20,10 @@ public class CrabScript : MonoBehaviour
     void Update()
     
     {
-        StartCoroutine(CheckEnemyMoving());
+       Move();
+    }
+    private void Move(){
+         StartCoroutine(CheckEnemyMoving());
         transform.position=Vector2.MoveTowards(transform.position, moveSpots[i].transform.position, speed*Time.deltaTime);
         if(Vector2.Distance(transform.position, moveSpots[i].transform.position)<0.1f){
             if(waitTime<=0){

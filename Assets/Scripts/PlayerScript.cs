@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheoMovement : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     public float runSpeed = 8;
     public float jumSpeed = 7;
