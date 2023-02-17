@@ -54,27 +54,15 @@ public class TheoMovement : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("run", false);
         }
-        
-        
+
+
     }
     void Jump()
     {
         if (Input.GetKey("space") && CheckGround.isGrounded)
         {
+            
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
-            animator.SetBool("run", false);
-        }
-        if (CheckGround.isGrounded)
-        {
-            animator.SetBool("jump", false);
-        }
-        else if(Math.Abs(rb2D.velocity.y)<0.1)
-        {
-            animator.SetBool("jump", true);
-            animator.SetBool("run", false);
-        }
-        if (betterJump)
-        {
             if (rb2D.velocity.y < 0)
             {
                 rb2D.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
@@ -85,6 +73,9 @@ public class TheoMovement : MonoBehaviour
 
             }
         }
+
+
+
     }
     void Update()
     {
@@ -104,16 +95,25 @@ public class TheoMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        if(CheckGround.isGrounded){
+            animator.SetBool("jump", false);
+        }
         if (!invencible)
         {
             if (other.transform.CompareTag("Crab"))
             {
+
                 TakeDamage(1);
                 StartCoroutine(Invulnerability());
             }
         }
 
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if(!CheckGround.isGrounded && !other.transform.CompareTag("Crab")){
+            animator.SetBool("jump", true);
+        }
     }
     IEnumerator Invulnerability()
     {
@@ -127,7 +127,7 @@ public class TheoMovement : MonoBehaviour
     }
     void TakeDamage(int amount)
     {
-        
+
         life -= amount;
         soundManager.selectAudio(1, 3f);
         if (life < 1)
