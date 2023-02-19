@@ -13,7 +13,7 @@ public class JumpDamageScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.CompareTag("Player") ){
-           // other.gameObject.GetComponent<Rigidbody2D>().velocity=(Vector2.up)*jumpForce;
+            other.gameObject.GetComponent<Rigidbody2D>().velocity=(Vector2.up)*jumpForce;
             LosseLifeAndHit();
             CheckLife();
         }
