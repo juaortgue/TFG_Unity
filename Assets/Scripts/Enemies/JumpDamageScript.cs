@@ -10,6 +10,7 @@ public class JumpDamageScript : MonoBehaviour
     //public GameObject destroyParticle;
     public float jumpForce = 2.5f;
     public int lifes =1;
+    public GameObject destroyParticle;
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.CompareTag("Player") ){
@@ -27,7 +28,7 @@ public class JumpDamageScript : MonoBehaviour
     }
     public void CheckLife(){
         if(lifes==0){
-           //   destroyParticle.SetActive(true);
+            destroyParticle.SetActive(true);
             
             Invoke("EnemyDie", 0.2f);
         }
