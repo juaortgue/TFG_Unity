@@ -5,16 +5,15 @@ using UnityEngine;
 public class JumpDamageScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Collider2D coll;
-    public Animator animator;
+   
     public SpriteRenderer spriteRenderer;
     //public GameObject destroyParticle;
     public float jumpForce = 2.5f;
     public int lifes =1;
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.transform.CompareTag("Player")){
-            other.gameObject.GetComponent<Rigidbody2D>().velocity=(Vector2.up)*jumpForce;
+        if(other.transform.CompareTag("Player") ){
+           // other.gameObject.GetComponent<Rigidbody2D>().velocity=(Vector2.up)*jumpForce;
             LosseLifeAndHit();
             CheckLife();
         }
@@ -22,15 +21,18 @@ public class JumpDamageScript : MonoBehaviour
     }
     public void LosseLifeAndHit(){
         lifes--;
+                Debug.Log(this.gameObject.name);
+            
+
     }
     public void CheckLife(){
         if(lifes==0){
-           // destroyParticle.SetActive(true);
-            spriteRenderer.enabled=false;
+           //   destroyParticle.SetActive(true);
+            
             Invoke("EnemyDie", 0.2f);
         }
     }
     public void EnemyDie(){
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }
