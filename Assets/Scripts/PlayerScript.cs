@@ -98,15 +98,7 @@ public class PlayerScript : MonoBehaviour
         if(CheckGround.isGrounded){
             animator.SetBool("jump", false);
         }
-        if (!invencible)
-        {
-            if (other.transform.CompareTag("Crab"))
-            {
-
-                TakeDamage(1);
-                StartCoroutine(Invulnerability());
-            }
-        }
+        
 
     }
     void OnTriggerExit2D(Collider2D other)
@@ -149,5 +141,17 @@ public class PlayerScript : MonoBehaviour
         soundManager.selectAudio(0, 0.3f);
         animator.SetBool("die", true);
         StartCoroutine(DieInvulnerability());
+    }
+    void  OnCollisionEnter2D(Collision2D other)
+    {
+        if (!invencible)
+        {
+            if (other.transform.CompareTag("Crab"))
+            {
+
+                TakeDamage(1);
+                StartCoroutine(Invulnerability());
+            }
+        }
     }
 }
