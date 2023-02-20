@@ -26,11 +26,13 @@ public class PlayerScript : MonoBehaviour
         nextCollision = 0f;
         rb2D = GetComponent<Rigidbody2D>();
         soundManager = FindObjectOfType<SoundManager>();
+        
 
     }
 
     void FixedUpdate()
     {
+        PlayerPrefs.DeleteAll();
         Move();
         Jump();
     }

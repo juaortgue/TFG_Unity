@@ -11,9 +11,16 @@ public class JumpDamageScript : MonoBehaviour
     public float jumpForce = 2.5f;
     public int lifes =1;
     public GameObject destroyParticle;
+    public SoundManager soundManager;
+    void Start()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+
+    }
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.CompareTag("Player") ){
+            soundManager.selectAudio(5,2f);
             other.gameObject.GetComponent<Rigidbody2D>().velocity=(Vector2.up)*jumpForce;
             LosseLifeAndHit();
             CheckLife();
