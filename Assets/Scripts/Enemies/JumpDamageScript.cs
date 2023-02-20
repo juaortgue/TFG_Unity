@@ -17,7 +17,7 @@ public class JumpDamageScript : MonoBehaviour
         soundManager = FindObjectOfType<SoundManager>();
 
     }
-    void OnCollisionEnter2D(Collision2D other)
+   /* void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.CompareTag("Player") ){
             soundManager.selectAudio(5,2f);
@@ -26,6 +26,15 @@ public class JumpDamageScript : MonoBehaviour
             CheckLife();
         }
         
+    }*/
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.transform.CompareTag("Player") ){
+            soundManager.selectAudio(5,2f);
+            other.gameObject.GetComponent<Rigidbody2D>().velocity=(Vector2.up)*jumpForce;
+            LosseLifeAndHit();
+            CheckLife();
+        }
     }
     public void LosseLifeAndHit(){
         lifes--;
