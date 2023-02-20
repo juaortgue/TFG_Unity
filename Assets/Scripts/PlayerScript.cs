@@ -61,7 +61,6 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKey("space") && CheckGround.isGrounded)
         {
-            
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
             if (rb2D.velocity.y < 0)
             {
@@ -72,6 +71,7 @@ public class PlayerScript : MonoBehaviour
                 rb2D.velocity += Vector2.up * Physics2D.gravity.y * lowJumpMultiplier * Time.deltaTime;
 
             }
+        }else{
         }
 
 
@@ -93,20 +93,8 @@ public class PlayerScript : MonoBehaviour
         return life <= 0;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(CheckGround.isGrounded){
-            animator.SetBool("jump", false);
-        }
-        
-
-    }
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if(!CheckGround.isGrounded && !other.transform.CompareTag("Crab")){
-            animator.SetBool("jump", true);
-        }
-    }
+   
+   
     IEnumerator Invulnerability()
     {
         invencible = true;

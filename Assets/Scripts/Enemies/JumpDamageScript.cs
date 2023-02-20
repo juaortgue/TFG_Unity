@@ -22,7 +22,6 @@ public class JumpDamageScript : MonoBehaviour
     }
     public void LosseLifeAndHit(){
         lifes--;
-                Debug.Log(this.gameObject.name);
             
 
     }

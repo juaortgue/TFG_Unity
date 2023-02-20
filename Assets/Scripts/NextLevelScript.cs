@@ -13,8 +13,8 @@ public class NextLevelScript : MonoBehaviour
 
         if (other.transform.CompareTag("Player"))
         {
-            PlayerPrefs.SetInt("nextScene", nextScene);
-            SceneManager.LoadScene(4);
+            //PlayerPrefs.SetInt("nextScene", nextScene);
+            //SceneManager.LoadScene(4);
 
         }
 

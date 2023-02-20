@@ -10,10 +10,15 @@ public class CheckGround : MonoBehaviour
     private  void OnTriggerEnter2D(Collider2D other)
     {
         isGrounded=true;
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        isGrounded=false;
+        string tag = other.gameObject.tag;
+        if(tag!="CheckPoint"){
+            isGrounded=false;
+
+        }
     }
 }
