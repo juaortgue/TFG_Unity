@@ -23,31 +23,44 @@ public class CrabScript : MonoBehaviour
        Move();
     }
     private void Move(){
-        StartCoroutine(CheckEnemyMoving());
+        //StartCoroutine(CheckEnemyMoving());
         transform.position=Vector2.MoveTowards(transform.position, moveSpots[i].transform.position, speed*Time.deltaTime);
-        if(Vector2.Distance(transform.position, moveSpots[i].transform.position)<0.1f){
+        if(Vector2.Distance(transform.position, moveSpots[i].transform.position)<1f){
             if(waitTime<=0){
                 if(moveSpots[i]!=moveSpots[moveSpots.Length-1]){
                     i++;
+                    
                 }else{
                     i=0;
                 }
+                spriteRenderer.flipX=!spriteRenderer.flipX;
                 waitTime=startWaitTime;
             }else{
                 waitTime-=Time.deltaTime;
             }
         }
     }
+    
     IEnumerator CheckEnemyMoving(){
         actualPos=transform.position;
         yield return new WaitForSeconds(0.5f);
 
-        if(transform.position.x>actualPos.x){
+        if(Vector2.Distance(transform.position, actualPos)<1){
             spriteRenderer.flipX=true;
-        }else if(transform.position.x<actualPos.x){
+        }else if(transform.position.x<actualPos.x+1){
+            
             spriteRenderer.flipX=false;
         }
     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Waypoint")){
+        CheckEnemyMoving();
+
+        }
+    }
+
+   
 
 
     

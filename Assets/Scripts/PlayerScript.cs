@@ -27,6 +27,7 @@ public class PlayerScript : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         soundManager = FindObjectOfType<SoundManager>();
         
+        
 
     }
 
@@ -73,7 +74,7 @@ public class PlayerScript : MonoBehaviour
                 rb2D.velocity += Vector2.up * Physics2D.gravity.y * lowJumpMultiplier * Time.deltaTime;
 
             }
-        }else{
+            soundManager.selectAudio(6,1);
         }
 
 
@@ -106,6 +107,7 @@ public class PlayerScript : MonoBehaviour
     IEnumerator DieInvulnerability()
     {
         yield return new WaitForSeconds(2);
+        GetComponent<PlayerRespawn>().PlayerDie();
     }
     void TakeDamage(int amount)
     {
@@ -131,6 +133,8 @@ public class PlayerScript : MonoBehaviour
         soundManager.selectAudio(0, 0.3f);
         animator.SetBool("die", true);
         StartCoroutine(DieInvulnerability());
+        
+
     }
     void  OnCollisionEnter2D(Collision2D other)
     {
