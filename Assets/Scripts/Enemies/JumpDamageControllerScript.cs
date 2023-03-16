@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpDamageScript : MonoBehaviour
+public class JumpDamageControllerScript : MonoBehaviour
 {
     // Start is called before the first frame update
    
@@ -11,10 +11,10 @@ public class JumpDamageScript : MonoBehaviour
     public float jumpForce = 2.5f;
     public int lifes =1;
     public GameObject destroyParticle;
-    public SoundManager soundManager;
+    public SoundManagerControllerScript soundManager;
     void Start()
     {
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = FindObjectOfType<SoundManagerControllerScript>();
 
     }
    

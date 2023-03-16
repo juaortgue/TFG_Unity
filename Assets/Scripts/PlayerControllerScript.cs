@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerControllerScript : MonoBehaviour
 {
     public float runSpeed = 8;
     public float jumSpeed = 7;
@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     private float nextCollision;
     private bool invencible = false;
     public float invincibilityTime = 3f;
-    private SoundManager soundManager;
+    private SoundManagerControllerScript soundManager;
     public GameObject[] Hearts;
 
     void Start()
@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour
         life = Hearts.Length;
         nextCollision = 0f;
         rb2D = GetComponent<Rigidbody2D>();
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = FindObjectOfType<SoundManagerControllerScript>();
         
         
 
@@ -62,7 +62,7 @@ public class PlayerScript : MonoBehaviour
     }
     void Jump()
     {
-        if (Input.GetKey("space") && CheckGround.isGrounded)
+        if (Input.GetKey("space") && CheckGroundControllerScript.isGrounded)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
             if (rb2D.velocity.y < 0)

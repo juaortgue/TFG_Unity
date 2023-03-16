@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinCollected : MonoBehaviour
-{    private SoundManager soundManager;
+public class CollectableCollectedControllerScript : MonoBehaviour
+{    private SoundManagerControllerScript soundManager;
 
     void Start()
     {
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = FindObjectOfType<SoundManagerControllerScript>();
 
     }
      private void OnTriggerEnter2D(Collider2D collision)

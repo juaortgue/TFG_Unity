@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckGround : MonoBehaviour
+public class CheckGroundControllerScript : MonoBehaviour
 {
     
     public static bool isGrounded;

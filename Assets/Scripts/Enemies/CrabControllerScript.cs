@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrabScript : MonoBehaviour
+public class CrabControllerScript : MonoBehaviour
 {
     public Animator animator;
     public SpriteRenderer spriteRenderer;

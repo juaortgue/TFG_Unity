@@ -7,11 +7,11 @@ public class ManageLevel : MonoBehaviour
 {
 
     public Button[] buttons;
-    private SoundManager soundManager;
+    private SoundManagerControllerScript soundManager;
 
     void Start()
     {
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = FindObjectOfType<SoundManagerControllerScript>();
         
         for (int i = 0; i < buttons.Length; i++)
         {

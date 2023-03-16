@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreeperScript : MonoBehaviour
+public class TrapControllerScript : MonoBehaviour
 {
     Renderer myRenderer;
-    public SoundManager soundManager;
+    public SoundManagerControllerScript soundManager;
 
     void Start()
     {
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = FindObjectOfType<SoundManagerControllerScript>();
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
