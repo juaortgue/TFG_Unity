@@ -8,6 +8,7 @@ public class SoundManagerControllerScript : MonoBehaviour
    private AudioSource controlAudio;
 
    private void Awake(){
+      
         controlAudio = GetComponent<AudioSource>();
    }
    public void selectAudio(int index, float volume){
