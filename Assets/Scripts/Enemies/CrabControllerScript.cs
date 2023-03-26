@@ -20,6 +20,7 @@ public class CrabControllerScript : MonoBehaviour
     void Update()
     
     {
+        
        Move();
     }
     private void Move(){

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckPointControllerScript : MonoBehaviour
 {
+    
     private SoundManagerControllerScript soundManager;
 
     // Start is called before the first frame update
@@ -17,7 +18,8 @@ public class CheckPointControllerScript : MonoBehaviour
         if(collision.transform.CompareTag("Player")){
             GetComponent<Animator>().enabled=true;
             collision.GetComponent<PlayerRespawn>().ReachedCheckPoint(transform.position.x, transform.position.y);
-            soundManager.selectAudio(4,2f);
+            if(soundManager!=null)
+                soundManager.selectAudio(4,2f);
         }
     }
 }

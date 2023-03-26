@@ -16,6 +16,7 @@ public class PlayerRespawn : MonoBehaviour
     public void ReachedCheckPoint(float x, float y){
         PlayerPrefs.SetFloat("checkPointPositionX",x);
         PlayerPrefs.SetFloat("checkPointPositionY",y);
+
     }
     public void PlayerDie(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

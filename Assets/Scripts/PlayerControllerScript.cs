@@ -33,7 +33,6 @@ public class PlayerControllerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        PlayerPrefs.DeleteAll();
         Move();
         Jump();
     }
