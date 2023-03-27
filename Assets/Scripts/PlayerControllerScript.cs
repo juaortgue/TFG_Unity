@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerControllerScript : MonoBehaviour
 {
     public float runSpeed = 8;
@@ -26,8 +27,8 @@ public class PlayerControllerScript : MonoBehaviour
         nextCollision = 0f;
         rb2D = GetComponent<Rigidbody2D>();
         soundManager = FindObjectOfType<SoundManagerControllerScript>();
-        
-        
+
+
 
     }
 
@@ -73,7 +74,7 @@ public class PlayerControllerScript : MonoBehaviour
                 rb2D.velocity += Vector2.up * Physics2D.gravity.y * lowJumpMultiplier * Time.deltaTime;
 
             }
-            soundManager.selectAudio(6,1);
+            soundManager.selectAudio(6, 1);
         }
 
 
@@ -95,8 +96,8 @@ public class PlayerControllerScript : MonoBehaviour
         return life <= 0;
     }
 
-   
-   
+
+
     IEnumerator Invulnerability()
     {
         invencible = true;
@@ -129,13 +130,14 @@ public class PlayerControllerScript : MonoBehaviour
     }
     void Die()
     {
-        soundManager.selectAudio(0, 0.3f);
+        if(soundManager!=null)
+            soundManager.selectAudio(0, 0.3f);
         animator.SetBool("die", true);
         StartCoroutine(DieInvulnerability());
-        
+
 
     }
-    void  OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (!invencible)
         {
@@ -145,6 +147,19 @@ public class PlayerControllerScript : MonoBehaviour
                 TakeDamage(1);
                 StartCoroutine(Invulnerability());
             }
+
         }
     }
+    public void TakeAllDamage()
+    {
+        life = 0;
+        Destroy(Hearts[0].gameObject);
+        Destroy(Hearts[1].gameObject);
+        Destroy(Hearts[2].gameObject);
+    }
+    public int getLife(){
+        return life;
+    }
 }
+
+
