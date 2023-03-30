@@ -37,25 +37,36 @@ public class PlayerControllerScript : MonoBehaviour
         Move();
         Jump();
     }
-
+    public void MoveRight()
+    {
+        rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
+        spriteRenderer.flipX = true;
+        animator.SetBool("run", true);
+    }
+    public void MoveLeft()
+    {
+        rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
+        spriteRenderer.flipX = false;
+        animator.SetBool("run", true);
+    }
+    public void NotMove()
+    {
+        rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+        animator.SetBool("run", false);
+    }
     void Move()
     {
         if (Input.GetKey("d"))
         {
-            rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
-            spriteRenderer.flipX = true;
-            animator.SetBool("run", true);
+            MoveRight();
         }
         else if (Input.GetKey("a"))
         {
-            rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
-            spriteRenderer.flipX = false;
-            animator.SetBool("run", true);
+            MoveLeft();
         }
         else
         {
-            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
-            animator.SetBool("run", false);
+            NotMove();
         }
 
 
@@ -64,21 +75,26 @@ public class PlayerControllerScript : MonoBehaviour
     {
         if (Input.GetKey("space") && CheckGroundControllerScript.isGrounded)
         {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
-            if (rb2D.velocity.y < 0)
-            {
-                rb2D.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
-            }
-            if (rb2D.velocity.y > 0 && !Input.GetKey("space"))
-            {
-                rb2D.velocity += Vector2.up * Physics2D.gravity.y * lowJumpMultiplier * Time.deltaTime;
-
-            }
-            soundManager.selectAudio(6, 1);
+            GoUp();
+            if(soundManager!=null)
+                soundManager.selectAudio(6, 1);
         }
 
 
 
+    }
+    public void GoUp()
+    {
+        rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
+        if (rb2D.velocity.y < 0)
+        {
+            rb2D.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
+        }
+        if (rb2D.velocity.y > 0 && !Input.GetKey("space"))
+        {
+            rb2D.velocity += Vector2.up * Physics2D.gravity.y * lowJumpMultiplier * Time.deltaTime;
+
+        }
     }
     void Update()
     {
@@ -130,8 +146,7 @@ public class PlayerControllerScript : MonoBehaviour
     }
     void Die()
     {
-        if(soundManager!=null)
-            soundManager.selectAudio(0, 0.3f);
+        soundManager.selectAudio(0, 0.3f);
         animator.SetBool("die", true);
         StartCoroutine(DieInvulnerability());
 
