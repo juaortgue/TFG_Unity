@@ -39,7 +39,9 @@ public class PlayerControllerScript : MonoBehaviour
     }
     public void MoveRight()
     {
+        
         rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
+        Debug.Log(rb2D.velocity);
         spriteRenderer.flipX = true;
         animator.SetBool("run", true);
     }
