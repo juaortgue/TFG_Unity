@@ -20,15 +20,16 @@ public class PlayerControllerScript : MonoBehaviour
     public float invincibilityTime = 3f;
     private SoundManagerControllerScript soundManager;
     public GameObject[] Hearts;
+    public float xLeftLimit;
 
     void Start()
     {
-
+        PlayerPrefs.DeleteAll();
         life = Hearts.Length;
         nextCollision = 0f;
         rb2D = GetComponent<Rigidbody2D>();
         soundManager = FindObjectOfType<SoundManagerControllerScript>();
-        CheckPointControllerScript checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckPointControllerScript>();
+        CheckPointControllerScript checkpoint = GameObject.FindGameObjectWithTag("CheckPoint").GetComponent<CheckPointControllerScript>();
         if(!checkpoint.positionSaved){
             PlayerPrefs.DeleteAll();
             
@@ -51,6 +52,10 @@ public class PlayerControllerScript : MonoBehaviour
     }
     public void MoveLeft()
     {
+        if(transform.position.x<=xLeftLimit){
+            
+            transform.position = new Vector3(xLeftLimit, transform.position.y, 0);
+        }
         rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
         spriteRenderer.flipX = false;
         animator.SetBool("run", true);
@@ -74,6 +79,7 @@ public class PlayerControllerScript : MonoBehaviour
         {
             NotMove();
         }
+        
 
 
     }
@@ -203,6 +209,8 @@ public class PlayerControllerScript : MonoBehaviour
     {
         this.life = life;
     }
+
+    
 }
 
 
