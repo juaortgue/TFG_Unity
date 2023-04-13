@@ -22,6 +22,7 @@ public class PlayerControllerScript : MonoBehaviour
     public GameObject[] Hearts;
     public float xLeftLimit;
     public float xRightLimit;
+    public float yLimit;
     void Start()
     {
         PlayerPrefs.DeleteAll();
@@ -90,7 +91,11 @@ public class PlayerControllerScript : MonoBehaviour
 
     }
     void Jump()
-    {
+    { if (transform.position.y >= yLimit)
+        {
+
+            transform.position = new Vector3(transform.position.x, yLimit, 0);
+        }
         if (Input.GetKey("space") && CheckGroundControllerScript.isGrounded)
         {
             GoUp();
@@ -103,6 +108,7 @@ public class PlayerControllerScript : MonoBehaviour
     }
     public void GoUp()
     {
+        
         rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
         if (rb2D.velocity.y < 0)
         {
