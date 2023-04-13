@@ -75,5 +75,18 @@ public class CrabTest : MonoBehaviour
         Assert.IsTrue(crabScript.spriteRenderer.flipX);
         Assert.Less(spot.transform.position.x, crab.transform.position.x);
     }
+    [UnityTest]
+    public IEnumerator CrabIsEliminatedTest()
+    {
+        yield return ScriptPlayerFoundedTest();
+        yield return ScriptCrabFoundedTest();
+        crabScript.speed = 0;
+        yield return new WaitForSeconds(1f);
+        Vector3 newPosition = crab.transform.position;
+        newPosition.y += 2;
+        player.transform.position = newPosition;
+        yield return new WaitForSeconds(1f);
+        Assert.AreEqual(crab.ToString(), "null");
+    }
 
 }
