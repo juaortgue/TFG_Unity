@@ -21,7 +21,7 @@ public class PlayerControllerScript : MonoBehaviour
     private SoundManagerControllerScript soundManager;
     public GameObject[] Hearts;
     public float xLeftLimit;
-
+    public float xRightLimit;
     void Start()
     {
         PlayerPrefs.DeleteAll();
@@ -30,9 +30,10 @@ public class PlayerControllerScript : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         soundManager = FindObjectOfType<SoundManagerControllerScript>();
         CheckPointControllerScript checkpoint = GameObject.FindGameObjectWithTag("CheckPoint").GetComponent<CheckPointControllerScript>();
-        if(!checkpoint.positionSaved){
+        if (!checkpoint.positionSaved)
+        {
             PlayerPrefs.DeleteAll();
-            
+
         }
 
     }
@@ -44,7 +45,11 @@ public class PlayerControllerScript : MonoBehaviour
     }
     public void MoveRight()
     {
+        if (transform.position.x >= xRightLimit)
+        {
 
+            transform.position = new Vector3(xRightLimit, transform.position.y, 0);
+        }
         rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
         Debug.Log(rb2D.velocity);
         spriteRenderer.flipX = true;
@@ -52,8 +57,9 @@ public class PlayerControllerScript : MonoBehaviour
     }
     public void MoveLeft()
     {
-        if(transform.position.x<=xLeftLimit){
-            
+        if (transform.position.x <= xLeftLimit)
+        {
+
             transform.position = new Vector3(xLeftLimit, transform.position.y, 0);
         }
         rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
@@ -79,7 +85,7 @@ public class PlayerControllerScript : MonoBehaviour
         {
             NotMove();
         }
-        
+
 
 
     }
@@ -143,29 +149,32 @@ public class PlayerControllerScript : MonoBehaviour
         life -= amount;
         if (soundManager != null)
             soundManager.selectAudio(1, 3f);
-        if(life<0){
-            life=0;
-        }else if(life>3 ){
-            life=3;
+        if (life < 0)
+        {
+            life = 0;
+        }
+        else if (life > 3)
+        {
+            life = 3;
         }
 
-        
-            if (life < 1)
-            {
-                Hearts[0].SetActive(false);
-                Hearts[2].SetActive(false);
-                Hearts[3].SetActive(false);
-            }
-            else if (life < 2)
-            {
-                Hearts[1].SetActive(false);
-                Hearts[2].SetActive(false);
-            }
-            else if (life < 3)
-            {
-                Hearts[2].SetActive(false);
-            }
-        
+
+        if (life < 1)
+        {
+            Hearts[0].SetActive(false);
+            Hearts[2].SetActive(false);
+            Hearts[3].SetActive(false);
+        }
+        else if (life < 2)
+        {
+            Hearts[1].SetActive(false);
+            Hearts[2].SetActive(false);
+        }
+        else if (life < 3)
+        {
+            Hearts[2].SetActive(false);
+        }
+
 
 
     }
@@ -210,7 +219,7 @@ public class PlayerControllerScript : MonoBehaviour
         this.life = life;
     }
 
-    
+
 }
 
 
