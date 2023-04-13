@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[1]
       value: 
       objectReference: {fileID: 1541131712}
+    - target: {fileID: 2081037560451059570, guid: 4fd6d9237ced9cb4a9f917f1e3840605, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2081037560451059583, guid: 4fd6d9237ced9cb4a9f917f1e3840605, type: 3}
       propertyPath: m_Name
       value: Crab

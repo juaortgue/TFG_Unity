@@ -23,7 +23,7 @@ public class CrabControllerScript : MonoBehaviour
         
        Move();
     }
-    private void Move(){
+    public void Move(){
         //StartCoroutine(CheckEnemyMoving());
         transform.position=Vector2.MoveTowards(transform.position, moveSpots[i].transform.position, speed*Time.deltaTime);
         if(Vector2.Distance(transform.position, moveSpots[i].transform.position)<1f){
@@ -42,7 +42,7 @@ public class CrabControllerScript : MonoBehaviour
         }
     }
     
-    IEnumerator CheckEnemyMoving(){
+    public IEnumerator CheckEnemyMoving(){
         actualPos=transform.position;
         yield return new WaitForSeconds(0.5f);
 
