@@ -23,12 +23,16 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Start()
     {
+
         life = Hearts.Length;
         nextCollision = 0f;
         rb2D = GetComponent<Rigidbody2D>();
         soundManager = FindObjectOfType<SoundManagerControllerScript>();
-
-
+        CheckPointControllerScript checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckPointControllerScript>();
+        if(!checkpoint.positionSaved){
+            PlayerPrefs.DeleteAll();
+            
+        }
 
     }
 
