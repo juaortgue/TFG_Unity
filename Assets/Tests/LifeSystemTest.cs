@@ -5,9 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-public class CreeperTest
+public class LifeSystemTest
 {
-    private GameObject creeper;
     private GameObject player;
     private PlayerControllerScript script;
     [SetUp]
@@ -15,10 +14,11 @@ public class CreeperTest
     {
         SceneManager.LoadScene("TestScene");
     }
+
     [UnityTest]
     public IEnumerator PlayerFoundedTest()
     {
-
+        
         player = GameObject.Find("Theo");
         Assert.NotNull(player, "El objeto del jugador no se ha encontrado.");
         yield return new WaitForSeconds(0.1f);
@@ -32,31 +32,45 @@ public class CreeperTest
         yield return new WaitForSeconds(0.1f);
     }
     [UnityTest]
-    public IEnumerator CreeperFoundedTest()
-    {
-
-        creeper = GameObject.Find("Creeper");
-        Assert.NotNull(creeper, "El objeto de la enredadera no se ha encontrado.");
-        yield return new WaitForSeconds(0.1f);
-    }
-   
-
-
-    [UnityTest]
-    public IEnumerator PlayerIsEliminatedTest()
+    public IEnumerator PlayerTakeAllDamageTest()
     {
         yield return ScriptPlayerFoundedTest();
-        yield return CreeperFoundedTest();
-        float x = creeper.transform.position.x;
-        float y = creeper.transform.position.y;
-        player.transform.position = new Vector3(x, y, 0);
-        
-        yield return new WaitForSeconds(0.1f);
-        Assert.AreEqual(script.getLife(), 0);
 
 
+        script.setLife(3);
+        int lifeBefore = script.getLife();
+        script.TakeAllDamage();
+
+        yield return new WaitForSeconds(1f);
+        int lifeAfter = script.getLife();
+
+        Assert.AreEqual(lifeBefore, 3);
+        Assert.AreEqual(lifeAfter, 0);
+        Assert.False(script.Hearts[0].activeInHierarchy);
+        Assert.False(script.Hearts[1].activeInHierarchy);
+        Assert.False(script.Hearts[2].activeInHierarchy);
 
 
     }
+    [UnityTest]
+    public IEnumerator PlayerTakeDamageTest()
+    {
+        yield return ScriptPlayerFoundedTest();
+        
+      
+        script.setLife(3);
 
+        // Act
+        script.TakeDamage(1);
+
+        // Assert
+        Assert.AreEqual(2, script.getLife());
+        Assert.IsTrue(script.Hearts[0].activeSelf);
+        Assert.IsTrue(script.Hearts[1].activeSelf);
+        Assert.IsFalse(script.Hearts[2].activeSelf);
+
+        
+
+
+    }
 }

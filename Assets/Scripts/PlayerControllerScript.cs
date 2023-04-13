@@ -39,7 +39,7 @@ public class PlayerControllerScript : MonoBehaviour
     }
     public void MoveRight()
     {
-        
+
         rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
         Debug.Log(rb2D.velocity);
         spriteRenderer.flipX = true;
@@ -78,7 +78,7 @@ public class PlayerControllerScript : MonoBehaviour
         if (Input.GetKey("space") && CheckGroundControllerScript.isGrounded)
         {
             GoUp();
-            if(soundManager!=null)
+            if (soundManager != null)
                 soundManager.selectAudio(6, 1);
         }
 
@@ -127,28 +127,44 @@ public class PlayerControllerScript : MonoBehaviour
         yield return new WaitForSeconds(2);
         GetComponent<PlayerRespawn>().PlayerDie();
     }
-    void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
 
         life -= amount;
-        soundManager.selectAudio(1, 3f);
-        if (life < 1)
-        {
-            Destroy(Hearts[0].gameObject);
+        if (soundManager != null)
+            soundManager.selectAudio(1, 3f);
+        if(life<0){
+            life=0;
+        }else if(life>3 ){
+            life=3;
         }
-        else if (life < 2)
-        {
-            Destroy(Hearts[1].gameObject);
-        }
-        else if (life < 3)
-        {
-            Destroy(Hearts[2].gameObject);
-        }
+
+        
+            if (life < 1)
+            {
+                Hearts[0].SetActive(false);
+                Hearts[2].SetActive(false);
+                Hearts[3].SetActive(false);
+            }
+            else if (life < 2)
+            {
+                Hearts[1].SetActive(false);
+                Hearts[2].SetActive(false);
+            }
+            else if (life < 3)
+            {
+                Hearts[2].SetActive(false);
+            }
+        
+
 
     }
     void Die()
     {
-        soundManager.selectAudio(0, 0.3f);
+        if (soundManager != null)
+        {
+            soundManager.selectAudio(0, 0.3f);
+        }
         animator.SetBool("die", true);
         StartCoroutine(DieInvulnerability());
 
@@ -170,12 +186,18 @@ public class PlayerControllerScript : MonoBehaviour
     public void TakeAllDamage()
     {
         life = 0;
-        Destroy(Hearts[0].gameObject);
-        Destroy(Hearts[1].gameObject);
-        Destroy(Hearts[2].gameObject);
+        Hearts[0].SetActive(false);
+        Hearts[1].SetActive(false);
+        Hearts[2].SetActive(false);
+
     }
-    public int getLife(){
+    public int getLife()
+    {
         return life;
+    }
+    public void setLife(int life)
+    {
+        this.life = life;
     }
 }
 

@@ -9,14 +9,7 @@ public class PlayerTest
 {
     private GameObject player;
   
-    [TearDown]
-    public void TearDown()
-    {
-
-        //GameObject.Destroy(player);
-        //PlayerPrefs.DeleteAll();
-
-    }
+    
 
     [UnityTest]
     public IEnumerator PlayerIsCreatedProperlyTest()
@@ -26,7 +19,7 @@ public class PlayerTest
         
     }
     [SetUp]
-    public void LoadScene()
+    public void SetUp()
     {
         SceneManager.LoadScene("TestScene");
         

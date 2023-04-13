@@ -1557,7 +1557,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1331089228}
   - {fileID: 1393698926}
   - {fileID: 1684918920}
   - {fileID: 33150939}
@@ -1584,6 +1583,7 @@ Transform:
   - {fileID: 1668609892}
   - {fileID: 1558755417}
   - {fileID: 2113560643}
+  - {fileID: 1261027775}
   - {fileID: 507115314}
   - {fileID: 1893330754}
   m_Father: {fileID: 0}
@@ -4246,7 +4246,7 @@ AudioSource:
   m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -14436,6 +14436,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251018137}
   m_CullTransparentMesh: 1
+--- !u!4 &1261027775 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5461573466645690258, guid: 03e801845fd97534ebf8bdb7289c8e6a, type: 3}
+  m_PrefabInstance: {fileID: 5408850775405174281}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1261606937
 GameObject:
   m_ObjectHideFlags: 0
@@ -14828,11 +14833,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1331089228 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5408850774351008069, guid: 03e801845fd97534ebf8bdb7289c8e6a, type: 3}
-  m_PrefabInstance: {fileID: 5408850775405174281}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1369556644
 GameObject:
   m_ObjectHideFlags: 0
