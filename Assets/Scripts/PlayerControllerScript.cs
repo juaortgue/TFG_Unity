@@ -25,7 +25,7 @@ public class PlayerControllerScript : MonoBehaviour
     public float yLimit;
     void Start()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         life = Hearts.Length;
         nextCollision = 0f;
         rb2D = GetComponent<Rigidbody2D>();
