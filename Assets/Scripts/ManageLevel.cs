@@ -24,9 +24,12 @@ public class ManageLevel : MonoBehaviour
             }
         }
         
+
     }
     public void ChangeLevel(int number)
     {
+        number=number+1;
+        PlayerPrefs.DeleteAll();
         soundManager.selectAudio(3,1f);
         SceneManager.LoadScene(number);
 

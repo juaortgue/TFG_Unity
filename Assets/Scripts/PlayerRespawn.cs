@@ -11,6 +11,8 @@ public class PlayerRespawn : MonoBehaviour
         float y = PlayerPrefs.GetFloat("checkPointPositionY");
         if(x!=0f && y!=0f){
             transform.position = new Vector2(x,y);
+        }else{
+            PlayerPrefs.DeleteAll();
         }
     }
     public void ReachedCheckPoint(float x, float y){
