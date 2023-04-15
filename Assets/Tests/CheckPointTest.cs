@@ -2,45 +2,53 @@ using System.Collections;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using UnityEngine.SceneManagement;
 
 public class CheckPointTest
 {
     private GameObject checkpoint;
     private GameObject player;
+    private PlayerControllerScript script;
 
-    [SetUp]
-    public void Setup()
+   [SetUp]
+    public void SetUp()
     {
-        checkpoint = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CheckPoint"),new Vector3(20, 20, 0), Quaternion.identity);
-        player = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Theo"),new Vector3(100, 100, 0), Quaternion.identity);
-        player.GetComponent<Rigidbody2D>().gravityScale = 0f;
-
+        SceneManager.LoadScene("TestScene");
     }
-    [TearDown]
-    public void TearDown()
-    {
-              
-        GameObject.Destroy(checkpoint);
-        GameObject.Destroy(player);
-        PlayerPrefs.DeleteAll();
-
-    }
-
-
     [UnityTest]
-    public IEnumerator CheckPointIsCreatedProperlyTest()
+    public IEnumerator PlayerFoundedTest()
     {
-        
-        GameObject checkpointInstantiate = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CheckPoint"), new Vector3(100, 0, 0), Quaternion.identity);
+
+        player = GameObject.Find("Theo");
+        Assert.NotNull(player, "El objeto del jugador no se ha encontrado.");
         yield return new WaitForSeconds(0.1f);
-        Assert.IsNotNull(checkpointInstantiate);    
     }
+    [UnityTest]
+    public IEnumerator ScriptPlayerFoundedTest()
+    {
+        yield return PlayerFoundedTest();
+        script = player.GetComponent<PlayerControllerScript>();
+        Assert.NotNull(script, "El componente PlayerControllerScript no se ha encontrado en el jugador.");
+        yield return new WaitForSeconds(0.1f);
+    }
+    [UnityTest]
+    public IEnumerator CheckPointFoundedTest()
+    {
+
+        checkpoint = GameObject.Find("Checkpoint");
+        Assert.NotNull(checkpoint, "El objeto del checkpoint no se ha encontrado.");
+        yield return new WaitForSeconds(0.1f);
+    }
+
+
+   
     [UnityTest]
     public IEnumerator CheckPointIsActivatedTest()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return ScriptPlayerFoundedTest();
+        yield return CheckPointFoundedTest();
         player.transform.position = checkpoint.transform.position;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(2f);
         Animator animator = checkpoint.GetComponent<Animator>();
         Assert.True(animator.enabled);        
 
