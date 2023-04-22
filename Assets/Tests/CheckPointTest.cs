@@ -13,6 +13,7 @@ public class CheckPointTest
    [SetUp]
     public void SetUp()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("TestScene");
     }
     [UnityTest]
@@ -58,7 +59,7 @@ public class CheckPointTest
      [UnityTest]
     public IEnumerator PlayerPositionIsSavedTest()
     {
-        PlayerPrefs.DeleteAll();
+        
         yield return new WaitForSeconds(0.1f);
         float xOld = PlayerPrefs.GetFloat("checkPointPositionX");
         float yOld = PlayerPrefs.GetFloat("checkPointPositionY");
