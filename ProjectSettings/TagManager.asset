@@ -10,6 +10,7 @@ TagManager:
   - Waypoint
   - JumpDamaged
   - Creeper
+  - EndCheckPoint
   layers:
   - Default
   - TransparentFX
