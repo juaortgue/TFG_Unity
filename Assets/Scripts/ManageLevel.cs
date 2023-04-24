@@ -15,7 +15,6 @@ public class ManageLevel : MonoBehaviour
         
         for (int i = 0; i < buttons.Length; i++)
         {
-            Debug.Log("boton = " + i);
             if (i <= PlayerPrefs.GetInt("nextScene"))
             {
                 buttons[i].interactable = true;

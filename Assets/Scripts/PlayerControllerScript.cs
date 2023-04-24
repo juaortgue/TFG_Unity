@@ -46,7 +46,6 @@ public class PlayerControllerScript : MonoBehaviour
             transform.position = new Vector3(xRightLimit, transform.position.y, 0);
         }
         rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
-        Debug.Log(rb2D.velocity);
         spriteRenderer.flipX = true;
         animator.SetBool("run", true);
     }

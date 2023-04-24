@@ -11,6 +11,7 @@ TagManager:
   - JumpDamaged
   - Creeper
   - EndCheckPoint
+  - Coin
   layers:
   - Default
   - TransparentFX
