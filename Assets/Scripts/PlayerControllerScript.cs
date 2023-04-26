@@ -161,8 +161,8 @@ public class PlayerControllerScript : MonoBehaviour
         if (life < 1)
         {
             Hearts[0].SetActive(false);
+            Hearts[1].SetActive(false);
             Hearts[2].SetActive(false);
-            Hearts[3].SetActive(false);
         }
         else if (life < 2)
         {
@@ -196,6 +196,12 @@ public class PlayerControllerScript : MonoBehaviour
             {
 
                 TakeDamage(1);
+                StartCoroutine(Invulnerability());
+            }
+            if (other.transform.CompareTag("Setoso"))
+            {
+
+                TakeDamage(2);
                 StartCoroutine(Invulnerability());
             }
 

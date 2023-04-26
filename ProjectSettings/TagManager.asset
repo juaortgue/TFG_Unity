@@ -12,6 +12,7 @@ TagManager:
   - Creeper
   - EndCheckPoint
   - Coin
+  - Setoso
   layers:
   - Default
   - TransparentFX
