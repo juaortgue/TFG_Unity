@@ -4751,6 +4751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 180576913}
   offset: {x: 1, y: 1, z: 1}
+  xLimit: 166.05
+  yLimit: 0.04
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21045,11 +21047,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3662340602540860680, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.41
+      value: 169.62
       objectReference: {fileID: 0}
     - target: {fileID: 3662340602540860680, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3662340602540860680, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: m_LocalPosition.z

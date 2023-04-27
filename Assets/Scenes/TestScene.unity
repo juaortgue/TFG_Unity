@@ -6411,15 +6411,15 @@ PrefabInstance:
     - target: {fileID: 7083671781115246626, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: Hearts.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 187995333}
     - target: {fileID: 7083671781115246626, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: Hearts.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1786204471}
     - target: {fileID: 7083671781115246626, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: Hearts.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 171203192}
     - target: {fileID: 8711014711895481031, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: m_GravityScale
       value: 1
@@ -17431,6 +17431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 963249543}
   offset: {x: 1, y: 1, z: 1}
+  xLimit: 0
+  yLimit: 0
 --- !u!81 &1994648348
 AudioListener:
   m_ObjectHideFlags: 0
