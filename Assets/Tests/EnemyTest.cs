@@ -5,11 +5,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-public class CrabTest : MonoBehaviour
+public class EnemyTest : MonoBehaviour
 {
     private GameObject player;
     private PlayerControllerScript script;
     private CrabControllerScript crabScript;
+    private CrabControllerScript setosoScript;
+    private GameObject setoso;
 
     private GameObject crab;
 
@@ -51,6 +53,22 @@ public class CrabTest : MonoBehaviour
         Assert.NotNull(crabScript, "El componente CrabControllerScript no se ha encontrado en el cangrejo.");
         yield return new WaitForSeconds(0.1f);
     }
+    public IEnumerator SetosoFoundedTest()
+    {
+
+        setoso = GameObject.Find("Setoso");
+        Assert.NotNull(setoso, "El objeto del setoso no se ha encontrado.");
+        yield return new WaitForSeconds(0.1f);
+    }
+    [UnityTest]
+    public IEnumerator ScriptSetosoFoundedTest()
+    {
+
+        yield return SetosoFoundedTest();
+        setosoScript = setoso.GetComponent<CrabControllerScript>();
+        Assert.NotNull(setosoScript, "El componente setosoScript no se ha encontrado en el setoso.");
+        yield return new WaitForSeconds(0.1f);
+    }
     [UnityTest]
     public IEnumerator CheckEnemyMovingTest()
     {
@@ -87,6 +105,22 @@ public class CrabTest : MonoBehaviour
         player.transform.position = newPosition;
         yield return new WaitForSeconds(1f);
         Assert.AreEqual(crab.ToString(), "null");
+    }
+    [UnityTest]
+    public IEnumerator SetosoIsNotEliminatedTest()
+    {
+        yield return ScriptPlayerFoundedTest();
+        yield return ScriptSetosoFoundedTest();
+        setosoScript.speed = 0;
+        yield return new WaitForSeconds(4f);
+        Vector3 newPosition = setoso.transform.position;
+        Vector3 oldPosition = player.transform.position;
+        newPosition.y += 2;
+        player.transform.position = newPosition;
+        yield return new WaitForSeconds(0.5f);
+        player.transform.position = oldPosition;
+        yield return new WaitForSeconds(3f);
+        Assert.AreNotEqual(setoso.ToString(), "null");
     }
 
 }
