@@ -192,7 +192,7 @@ public class PlayerControllerScript : MonoBehaviour
     {
         if (!invencible)
         {
-            if (other.transform.CompareTag("Crab"))
+            if (other.transform.CompareTag("Crab") || other.transform.CompareTag("Slime"))
             {
 
                 TakeDamage(1);
@@ -204,6 +204,7 @@ public class PlayerControllerScript : MonoBehaviour
                 TakeDamage(2);
                 StartCoroutine(Invulnerability());
             }
+            
 
         }
     }

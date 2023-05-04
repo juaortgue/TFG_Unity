@@ -13,6 +13,7 @@ TagManager:
   - EndCheckPoint
   - Coin
   - Setoso
+  - Slime
   layers:
   - Default
   - TransparentFX
