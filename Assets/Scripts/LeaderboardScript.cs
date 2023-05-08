@@ -17,10 +17,13 @@ public class LeaderboardScript : MonoBehaviour
 
     void Start()
     {
-        coins = 0;
-        enemies = 0;
-        scoreCoinText.text = "Coins = 0";
-        scoreEnemyText.text = "Enemies = 0";
+        
+        
+        scoreCoinText.text = "Coins = "+PlayerPrefs.GetInt("coins");
+        scoreEnemyText.text = "Enemies = "+PlayerPrefs.GetInt("enemies");
+        
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +33,8 @@ public class LeaderboardScript : MonoBehaviour
             if (canCollectCoin) // Solo si se puede recoger una moneda
             {
                 coins++;
+                PlayerPrefs.SetInt("coins", coins);
+
                 scoreCoinText.text = "Coins = " + coins;
                 canCollectCoin = false; // Desactivar la recolección de monedas temporalmente
                 Invoke("EnableCoinCollection", coinDisableTime); // Llamar a la función EnableCoinCollection después de coinDisableTime segundos
@@ -41,6 +46,7 @@ public class LeaderboardScript : MonoBehaviour
             if (canKillEnemy)
             {
                 enemies++;
+                PlayerPrefs.SetInt("enemies", enemies);
                 scoreEnemyText.text = "Enemies = " + enemies;
                 canKillEnemy = false;
                 Invoke("EnableKillEnemy", enemyDisableTime); // Llamar a la función EnableCoinCollection después de coinDisableTime segundos
