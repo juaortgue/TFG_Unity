@@ -8,7 +8,7 @@ public class LeaderboardScript : MonoBehaviour
     public int coins;
     public int enemies;
     public Text scoreCoinText, scoreEnemyText;
-    public float coinDisableTime = 0.1f; // Tiempo en segundos para desactivar el colisionador de la moneda
+    public float coinDisableTime = 0.05f; // Tiempo en segundos para desactivar el colisionador de la moneda
     public float enemyDisableTime = 0.1f; // Tiempo en segundos para desactivar el colisionador de la moneda
 
     private bool canCollectCoin = true; // Variable para verificar si se puede recoger una moneda
