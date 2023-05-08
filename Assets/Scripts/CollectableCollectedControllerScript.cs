@@ -18,11 +18,12 @@ public class CollectableCollectedControllerScript : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().enabled = false;
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            GetComponent<Collider2D>().enabled = false; // Desactivar el colisionador de la moneda
             Destroy(gameObject, 0.5f);
-            
             soundManager.selectAudio(2, 0.3f);
 
         }
+
 
     }
 }

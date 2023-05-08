@@ -66,10 +66,10 @@ public class CollectableTest
     {
         yield return CoinScriptFoundedTest();
         yield return LeaderboardScriptFoundedTest();
-        int oldValue = Convert.ToInt32(leaderboardScript.coins[0]);
+        int oldValue = Convert.ToInt32(leaderboardScript.coins);
         coin.transform.position = player.transform.position;
         yield return new WaitForSeconds(0.1f);
-        int newValue = Convert.ToInt32(leaderboardScript.coins[0]);
+        int newValue = Convert.ToInt32(leaderboardScript.coins);
         Assert.AreEqual(oldValue+1, newValue);
         yield return new WaitForSeconds(0.1f);
     }
