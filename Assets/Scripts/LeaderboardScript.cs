@@ -12,7 +12,8 @@ public class LeaderboardScript : MonoBehaviour
     public float enemyDisableTime = 0.1f; // Tiempo en segundos para desactivar el colisionador de la moneda
 
     private bool canCollectCoin = true; // Variable para verificar si se puede recoger una moneda
-    private bool canKillEnemy = true; // Variable para verificar si se puede recoger una moneda
+    private bool canKillEnemy = true;
+    private int setosoHits = 0;
 
     void Start()
     {
@@ -34,11 +35,11 @@ public class LeaderboardScript : MonoBehaviour
                 Invoke("EnableCoinCollection", coinDisableTime); // Llamar a la función EnableCoinCollection después de coinDisableTime segundos
             }
         }
-        
         if (collision.transform.name == "JumpDamaged")
         {
+
             if (canKillEnemy)
-            {Debug.Log("colisiono");
+            {
                 enemies++;
                 scoreEnemyText.text = "Enemies = " + enemies;
                 canKillEnemy = false;
@@ -47,13 +48,15 @@ public class LeaderboardScript : MonoBehaviour
         }
 
 
+
     }
 
     private void EnableCoinCollection()
     {
         canCollectCoin = true; // Activar la recolección de monedas nuevamente
     }
-    private void EnableKillEnemy(){
+    private void EnableKillEnemy()
+    {
         canKillEnemy = true;
     }
 

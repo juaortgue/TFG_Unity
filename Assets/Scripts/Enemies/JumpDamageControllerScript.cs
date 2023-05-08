@@ -20,13 +20,18 @@ public class JumpDamageControllerScript : MonoBehaviour
    
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.transform.CompareTag("Player") ){
+       
+        if(other.transform.CompareTag("Player")){
+            
+            
             GetComponent<Collider2D>().enabled = false;
             soundManager.selectAudio(5,2f);
             other.gameObject.GetComponent<Rigidbody2D>().velocity=(Vector2.up)*jumpForce;
             LosseLifeAndHit();
             CheckLife();
+            
         }
+       
     }
     public void LosseLifeAndHit(){
         lifes--;
