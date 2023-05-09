@@ -107,7 +107,7 @@ public class EnemyTest : MonoBehaviour
         Assert.AreEqual(crab.ToString(), "null");
     }
     [UnityTest]
-    public IEnumerator SetosoIsNotEliminatedTest()
+    public IEnumerator SetosoIsEliminatedTest()
     {
         yield return ScriptPlayerFoundedTest();
         yield return ScriptSetosoFoundedTest();
@@ -120,7 +120,7 @@ public class EnemyTest : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         player.transform.position = oldPosition;
         yield return new WaitForSeconds(3f);
-        Assert.AreNotEqual(setoso.ToString(), "null");
+        Assert.AreEqual(setoso.ToString(), "null");
     }
 
 }

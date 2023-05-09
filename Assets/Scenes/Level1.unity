@@ -1421,7 +1421,7 @@ GameObject:
   - component: {fileID: 149349583}
   - component: {fileID: 149349582}
   m_Layer: 5
-  m_Name: Coins
+  m_Name: CoinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1480,7 +1480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Coins = 0
+  m_Text: 'Coins = '
 --- !u!222 &149349583
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16455,8 +16455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7b1bd3e5d30364cbbed219506dddd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
-  enemies: 0
   scoreCoinText: {fileID: 149349582}
   scoreEnemyText: {fileID: 1641005307}
   coinDisableTime: 0.05
@@ -17799,7 +17797,7 @@ GameObject:
   - component: {fileID: 1641005308}
   - component: {fileID: 1641005307}
   m_Layer: 5
-  m_Name: Enemies
+  m_Name: EnemieText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17858,7 +17856,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enemies = 0
+  m_Text: 'Enemies = '
 --- !u!222 &1641005308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21251,11 +21249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3662340602540860680, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.56
+      value: 156.34
       objectReference: {fileID: 0}
     - target: {fileID: 3662340602540860680, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: 3662340602540860680, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: m_LocalPosition.z
