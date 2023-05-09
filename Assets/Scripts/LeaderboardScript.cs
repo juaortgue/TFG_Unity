@@ -13,7 +13,6 @@ public class LeaderboardScript : MonoBehaviour
 
     private bool canCollectCoin = true; // Variable para verificar si se puede recoger una moneda
     private bool canKillEnemy = true;
-    private int setosoHits = 0;
 
     void Start()
     {

@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 13648
+  controlID: 11354
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -96,18 +96,18 @@ MonoBehaviour:
       y: 21
       width: 1020
       height: 452
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 510, y: 226}
+    m_Scale: {x: 2, y: 2}
+    m_Translation: {x: 532.11176, y: 210.92453}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -510
-      y: -226
-      width: 1020
-      height: 452
+      x: -266.05588
+      y: -105.462265
+      width: 510
+      height: 226
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1020, y: 473}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 13649
+  controlID: 11355
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 13650
+  controlID: 11356
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 13651
+  controlID: 11357
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,23 +248,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: f6790000
       m_LastClickedID: 0
-      m_ExpandedIDs: 5ea2ffff20d3ffff4ad3ffff0ed5fffff2d7ffff66dbffff30deffff66efffff20f1fffffaf3ffff94f6fffff2f9ffff2cfbffff7ea6000058ad000078d7000062de0000dcde0000
+      m_ExpandedIDs: 22eeffff2cfbffff3c620000a0620000d4620000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Slime
-        m_OriginalName: Slime
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -11488
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 6}
       m_SearchString: 
@@ -293,8 +293,8 @@ MonoBehaviour:
     y: 0
     width: 1022
     height: 494
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -356,7 +356,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -389,7 +389,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Tilemap Focus
@@ -548,9 +548,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 173.2637, y: -2.643994, z: -0.046555705}
+    m_Target: {x: 448.52832, y: 221.35031, z: -0.106131576}
     speed: 2
-    m_Value: {x: 173.2637, y: -2.643994, z: -0.046555705}
+    m_Value: {x: 448.52832, y: 221.35031, z: -0.106131576}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -601,9 +601,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.565327
+    m_Target: 88.33935
     speed: 2
-    m_Value: 8.565327
+    m_Value: 88.33935
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -696,22 +696,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/KokoLand
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/KokoLand
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Juan Antonio\Desktop\aaa\TFG_Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 866a0000
-    m_LastClickedID: 27270
-    m_ExpandedIDs: 00000000586a00005a6a00005c6a00005e6a0000606a0000626a0000646a0000666a0000686a00006a6a000000ca9a3b
+    m_SelectedIDs: f6790000
+    m_LastClickedID: 31222
+    m_ExpandedIDs: 00000000c0670000c2670000c4670000c6670000c8670000ca670000cc670000ce670000d0670000d267000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -739,7 +739,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000586a00005a6a00005c6a00005e6a0000606a0000626a0000646a0000666a0000686a00006a6a000000ca9a3b
+    m_ExpandedIDs: 00000000c0670000c2670000c4670000c6670000c8670000ca670000cc670000ce670000d0670000d267000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -764,8 +764,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: f6790000
+    m_LastClickedInstanceID: 31222
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000606c00005c6c0000326c00003c6c0000746c0000e05f0000e25f0000ea5f00002460000020600000226500005662000064620000ec690000806200005463000088bb00000abb00008666000028790000f07500008068000026670000c0650000a06a0000c86a0000c86b0000926b0000807a00006a7200001e9e0000fc9c00002c660000a86500009c650000e465000040660000846600000066000058650000d8bf0000748a0000408f0000367b00006263000090840000587f0000ee680000bc680000
     m_RenameOverlay:
@@ -791,7 +791,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 16}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 13720
+  controlID: 11350
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -876,7 +876,7 @@ MonoBehaviour:
   - {fileID: 17}
   - {fileID: 18}
   m_Selected: 1
-  m_LastSelected: 0
+  m_LastSelected: 2
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1079,9 +1079,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 595e86f9e038fb6469ee96f93fa98d55, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 6a9fd5a00158e9a4ea6173e235d3e1ed, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -89421977833627220, guid: 595e86f9e038fb6469ee96f93fa98d55, type: 2}
+  - m_Target: {fileID: 6974939114766698813, guid: 6a9fd5a00158e9a4ea6173e235d3e1ed, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1199,7 +1199,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 6278
+    ID: 187
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -2201,20 +2201,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1008
       parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][PlayerTest][suite]
-    m_ResultText: "SetosoIsNotEliminatedTest (1,349s)\n---\nSystem.NullReferenceException
-      : Object reference not set to an instance of an object\n---\nat CrabTest+<SetosoIsNotEliminatedTest>d__16.MoveNext
-      () [0x0007c] in C:\\Users\\Juan Antonio\\Desktop\\aaa\\TFG_Unity\\Assets\\Tests\\EnemyTest.cs:114
-      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-      in C:\\Users\\Juan Antonio\\Desktop\\aaa\\TFG_Unity\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46"
-    m_ResultStacktrace: "  at CrabTest+<SetosoIsNotEliminatedTest>d__16.MoveNext
-      () [0x0007c] in C:\\Users\\Juan Antonio\\Desktop\\aaa\\TFG_Unity\\Assets\\Tests\\EnemyTest.cs:114
-      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-      in C:\\Users\\Juan Antonio\\Desktop\\aaa\\TFG_Unity\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+    m_ResultText: PlayerTest (2,765s)
+    m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 129af1b7
-      m_LastClickedID: -1208903150
-      m_ExpandedIDs: 23c7c5a4a190a5b29515cc040b9fd22eb5fdb962ffffff7f
+      scrollPos: {x: 0, y: 286}
+      m_SelectedIDs: 7886f01e
+      m_LastClickedID: 519079544
+      m_ExpandedIDs: e8e4d88623c7c5a4a190a5b229470fcbb3c367019515cc047886f01e0b9fd22e19a2f233b5fdb9625b3e58657ad3a276ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2348,4 +2341,4 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -34442
+  m_LastSelectedObjectID: 25300
