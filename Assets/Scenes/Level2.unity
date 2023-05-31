@@ -2744,15 +2744,15 @@ PrefabInstance:
     - target: {fileID: 7083671781115246626, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: Hearts.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1479399029}
     - target: {fileID: 7083671781115246626, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: Hearts.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1260027169}
     - target: {fileID: 7083671781115246626, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: Hearts.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 445350702}
     - target: {fileID: 8711014711895481031, guid: b32a97d90d221f54bb745f1aece4f2eb, type: 3}
       propertyPath: m_GravityScale
       value: 1
@@ -2783,8 +2783,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   enemies: 0
-  scoreCoinText: {fileID: 0}
-  scoreEnemyText: {fileID: 0}
+  scoreCoinText: {fileID: 208385397}
+  scoreEnemyText: {fileID: 1475398281}
   coinDisableTime: 0.05
   enemyDisableTime: 0.1
 --- !u!1 &181714723

@@ -18,6 +18,7 @@ public class DataGameControllerScript : MonoBehaviour
     }
 
     public void load(){
+        Debug.Log("cargo "+gamedata.actualLevel);
         if(isFileSaved()){
             Debug.Log("existe");
             string content = File.ReadAllText(saveFile);
@@ -29,8 +30,11 @@ public class DataGameControllerScript : MonoBehaviour
         }
     }
     public void save(){
+        Debug.Log("guardo el nivel="+level);
         GameData newGameData = new GameData(){actualLevel=level};
         string json = JsonUtility.ToJson(newGameData);
+        
+        File.Delete(saveFile);
         File.WriteAllText(saveFile, json);
         Debug.Log("archivo guardado");
         Debug.Log(saveFile);
