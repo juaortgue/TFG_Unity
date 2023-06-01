@@ -11,9 +11,12 @@ public class EnemyTest : MonoBehaviour
     private PlayerControllerScript script;
     private CrabControllerScript crabScript;
     private CrabControllerScript setosoScript;
+    private CrabControllerScript slimeScript;
+
     private GameObject setoso;
 
     private GameObject crab;
+    private GameObject slime;
 
     [SetUp]
     public void SetUp()
@@ -122,5 +125,37 @@ public class EnemyTest : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Assert.AreEqual(setoso.ToString(), "null");
     }
+    [UnityTest]
+     public IEnumerator SlimeFoundedTest()
+    {
 
+        slime = GameObject.Find("Slime");
+        Assert.NotNull(slime, "El objeto del slime no se ha encontrado.");
+        yield return new WaitForSeconds(0.1f);
+    }
+    [UnityTest]
+    public IEnumerator ScriptSlimeFoundedTest()
+    {
+
+        yield return SlimeFoundedTest();
+        slimeScript = slime.GetComponent<CrabControllerScript>();
+        Assert.NotNull(slimeScript, "El componente slimeScript no se ha encontrado en el slime.");
+        yield return new WaitForSeconds(0.1f);
+    }
+    [UnityTest]
+    public IEnumerator SlimeIsEliminatedTest()
+    {
+        yield return ScriptPlayerFoundedTest();
+        yield return ScriptSlimeFoundedTest();
+        slimeScript.speed = 0;
+        yield return new WaitForSeconds(4f);
+        Vector3 newPosition = slime.transform.position;
+        Vector3 oldPosition = player.transform.position;
+        newPosition.y += 2;
+        player.transform.position = newPosition;
+        yield return new WaitForSeconds(0.5f);
+        player.transform.position = oldPosition;
+        yield return new WaitForSeconds(3f);
+        Assert.AreEqual(slime.ToString(), "null");
+    }
 }
