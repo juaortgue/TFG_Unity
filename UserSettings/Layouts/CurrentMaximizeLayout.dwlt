@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 11354
+  controlID: -1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -47,7 +47,7 @@ MonoBehaviour:
     x: 285
     y: 73
     width: 1020
-    height: 473
+    height: 472
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 804, y: 452}
+  m_TargetSize: {x: 802, y: 451}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -73,10 +73,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -402
-    m_HBaseRangeMax: 402
-    m_VBaseRangeMin: -226
-    m_VBaseRangeMax: 226
+    m_HBaseRangeMin: -401
+    m_HBaseRangeMax: 401
+    m_VBaseRangeMin: -225.5
+    m_VBaseRangeMax: 225.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -95,22 +95,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1020
-      height: 452
-    m_Scale: {x: 2, y: 2}
-    m_Translation: {x: 532.11176, y: 210.92453}
+      height: 451
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 510, y: 225.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -266.05588
-      y: -105.462265
-      width: 510
-      height: 226
+      x: -510
+      y: -225.5
+      width: 1020
+      height: 451
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1020, y: 473}
+  m_LastWindowPixelSize: {x: 1020, y: 472}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 11355
+  controlID: -1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 11356
+  controlID: -1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,11 +186,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1307
-    height: 494
+    height: 493
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 11357
+  controlID: -1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -209,9 +209,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 285
-    height: 494
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 493
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -240,7 +240,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 284
-    height: 473
+    height: 472
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -248,9 +248,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f6790000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 22eeffff2cfbffff3c620000a0620000d4620000
+      m_SelectedIDs: c8dd0000
+      m_LastClickedID: 56776
+      m_ExpandedIDs: 1adeffffd2eaffff24ebffff30edffffdcefffff30f3ffff70f7ffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -266,7 +266,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 6}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -292,9 +292,9 @@ MonoBehaviour:
     x: 285
     y: 0
     width: 1022
-    height: 494
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 493
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -324,7 +324,7 @@ MonoBehaviour:
     x: 285
     y: 73
     width: 1020
-    height: 473
+    height: 472
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -345,9 +345,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: 149}
+      snapOffset: {x: -141, y: -210.19998}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -548,9 +548,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 448.52832, y: 221.35031, z: -0.106131576}
+    m_Target: {x: 51.24027, y: 1.7064427, z: -0.22669646}
     speed: 2
-    m_Value: {x: 448.52832, y: 221.35031, z: -0.106131576}
+    m_Value: {x: 51.24027, y: 1.7064427, z: -0.22669646}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -601,9 +601,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 88.33935
+    m_Target: 13.86321
     speed: 2
-    m_Value: 88.33935
+    m_Value: 13.86321
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -644,9 +644,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 494
+    y: 493
     width: 1307
-    height: 445
+    height: 446
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 11}
@@ -676,9 +676,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 567
+    y: 566
     width: 1306
-    height: 424
+    height: 425
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -696,22 +696,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/KokoLand
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/KokoLand
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Juan Antonio\Desktop\aaa\TFG_Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: f6790000
-    m_LastClickedID: 31222
-    m_ExpandedIDs: 00000000c0670000c2670000c4670000c6670000c8670000ca670000cc670000ce670000d0670000d267000000ca9a3b
+    scrollPos: {x: 0, y: 204}
+    m_SelectedIDs: e2680000
+    m_LastClickedID: 26850
+    m_ExpandedIDs: 00000000d2670000d4670000d6670000d8670000da670000dc670000de670000e0670000e2670000e467000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -739,7 +739,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c0670000c2670000c4670000c6670000c8670000ca670000cc670000ce670000d0670000d267000000ca9a3b
+    m_ExpandedIDs: 00000000d2670000d4670000d6670000d8670000da670000dc670000de670000e0670000e2670000e467000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -764,8 +764,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f6790000
-    m_LastClickedInstanceID: 31222
+    m_SelectedInstanceIDs: c8dd0000
+    m_LastClickedInstanceID: 56776
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000606c00005c6c0000326c00003c6c0000746c0000e05f0000e25f0000ea5f00002460000020600000226500005662000064620000ec690000806200005463000088bb00000abb00008666000028790000f07500008068000026670000c0650000a06a0000c86a0000c86b0000926b0000807a00006a7200001e9e0000fc9c00002c660000a86500009c650000e465000040660000846600000066000058650000d8bf0000748a0000408f0000367b00006263000090840000587f0000ee680000bc680000
     m_RenameOverlay:
@@ -791,7 +791,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 16}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 11350
+  controlID: 1637
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -876,7 +876,7 @@ MonoBehaviour:
   - {fileID: 17}
   - {fileID: 18}
   m_Selected: 1
-  m_LastSelected: 2
+  m_LastSelected: 3
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1079,9 +1079,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 6a9fd5a00158e9a4ea6173e235d3e1ed, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 595e86f9e038fb6469ee96f93fa98d55, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 6974939114766698813, guid: 6a9fd5a00158e9a4ea6173e235d3e1ed, type: 2}
+  - m_Target: {fileID: -89421977833627220, guid: 595e86f9e038fb6469ee96f93fa98d55, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1199,7 +1199,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 187
+    ID: 2137
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1230,9 +1230,9 @@ MonoBehaviour:
       uniqueId: '[Kokoland][suite]'
       name: Kokoland
       fullName: Kokoland
-      resultStatus: 2
-      duration: 1.7072752
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 23.938921
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1246,9 +1246,9 @@ MonoBehaviour:
       uniqueId: '[Tests_Edit_Mode][C:/Users/Juan Antonio/Desktop/aaa/TFG_Unity/Library/ScriptAssemblies/Tests_Edit_Mode.dll][suite]'
       name: Tests_Edit_Mode.dll
       fullName: C:/Users/Juan Antonio/Desktop/aaa/TFG_Unity/Library/ScriptAssemblies/Tests_Edit_Mode.dll
-      resultStatus: 2
-      duration: 1.3812891
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 23.621346
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1263,7 +1263,7 @@ MonoBehaviour:
       name: CheckPointTest
       fullName: CheckPointTest
       resultStatus: 1
-      duration: 6.0344577
+      duration: 5.9760685
       messages: 
       output: 
       stacktrace: 
@@ -1279,7 +1279,7 @@ MonoBehaviour:
       name: CheckPointFoundedTest
       fullName: CheckPointTest.CheckPointFoundedTest
       resultStatus: 1
-      duration: 0.7297171
+      duration: 0.7242475
       messages: 
       output: 
       stacktrace: 
@@ -1296,7 +1296,7 @@ MonoBehaviour:
       name: CheckPointIsActivatedTest
       fullName: CheckPointTest.CheckPointIsActivatedTest
       resultStatus: 1
-      duration: 2.372191
+      duration: 2.3625574
       messages: 
       output: 
       stacktrace: 
@@ -1313,7 +1313,7 @@ MonoBehaviour:
       name: PlayerFoundedTest
       fullName: CheckPointTest.PlayerFoundedTest
       resultStatus: 1
-      duration: 0.1624659
+      duration: 0.1545083
       messages: 
       output: 
       stacktrace: 
@@ -1330,7 +1330,7 @@ MonoBehaviour:
       name: PlayerPositionIsSavedTest
       fullName: CheckPointTest.PlayerPositionIsSavedTest
       resultStatus: 1
-      duration: 2.4779034
+      duration: 2.4590807
       messages: 
       output: 
       stacktrace: 
@@ -1347,7 +1347,7 @@ MonoBehaviour:
       name: ScriptPlayerFoundedTest
       fullName: CheckPointTest.ScriptPlayerFoundedTest
       resultStatus: 1
-      duration: 0.2691366
+      duration: 0.2528063
       messages: 
       output: 
       stacktrace: 
@@ -1364,7 +1364,7 @@ MonoBehaviour:
       name: CollectableTest
       fullName: CollectableTest
       resultStatus: 1
-      duration: 1.7949553
+      duration: 1.740932
       messages: 
       output: 
       stacktrace: 
@@ -1380,7 +1380,7 @@ MonoBehaviour:
       name: CoinCollectedTest
       fullName: CollectableTest.CoinCollectedTest
       resultStatus: 1
-      duration: 0.6635411
+      duration: 0.6635836
       messages: 
       output: 
       stacktrace: 
@@ -1397,7 +1397,7 @@ MonoBehaviour:
       name: CoinFoundedTest
       fullName: CollectableTest.CoinFoundedTest
       resultStatus: 1
-      duration: 0.1695386
+      duration: 0.1524167
       messages: 
       output: 
       stacktrace: 
@@ -1414,7 +1414,7 @@ MonoBehaviour:
       name: CoinScriptFoundedTest
       fullName: CollectableTest.CoinScriptFoundedTest
       resultStatus: 1
-      duration: 0.2705441
+      duration: 0.2512344
       messages: 
       output: 
       stacktrace: 
@@ -1431,7 +1431,7 @@ MonoBehaviour:
       name: LeaderboardScriptFoundedTest
       fullName: CollectableTest.LeaderboardScriptFoundedTest
       resultStatus: 1
-      duration: 0.2616766
+      duration: 0.2510682
       messages: 
       output: 
       stacktrace: 
@@ -1448,7 +1448,7 @@ MonoBehaviour:
       name: PlayerFoundedTest
       fullName: CollectableTest.PlayerFoundedTest
       resultStatus: 1
-      duration: 0.1577724
+      duration: 0.1542992
       messages: 
       output: 
       stacktrace: 
@@ -1465,7 +1465,7 @@ MonoBehaviour:
       name: ScriptPlayerFoundedTest
       fullName: CollectableTest.ScriptPlayerFoundedTest
       resultStatus: 1
-      duration: 0.2626684
+      duration: 0.258822
       messages: 
       output: 
       stacktrace: 
@@ -1482,7 +1482,7 @@ MonoBehaviour:
       name: CreeperTest
       fullName: CreeperTest
       resultStatus: 1
-      duration: 1.0514613
+      duration: 1.0127362
       messages: 
       output: 
       stacktrace: 
@@ -1498,7 +1498,7 @@ MonoBehaviour:
       name: CreeperFoundedTest
       fullName: CreeperTest.CreeperFoundedTest
       resultStatus: 1
-      duration: 0.1581823
+      duration: 0.1513631
       messages: 
       output: 
       stacktrace: 
@@ -1515,7 +1515,7 @@ MonoBehaviour:
       name: PlayerFoundedTest
       fullName: CreeperTest.PlayerFoundedTest
       resultStatus: 1
-      duration: 0.1595483
+      duration: 0.1495594
       messages: 
       output: 
       stacktrace: 
@@ -1532,7 +1532,7 @@ MonoBehaviour:
       name: PlayerIsEliminatedTest
       fullName: CreeperTest.PlayerIsEliminatedTest
       resultStatus: 1
-      duration: 0.4675443
+      duration: 0.4529402
       messages: 
       output: 
       stacktrace: 
@@ -1549,7 +1549,7 @@ MonoBehaviour:
       name: ScriptPlayerFoundedTest
       fullName: CreeperTest.ScriptPlayerFoundedTest
       resultStatus: 1
-      duration: 0.2571793
+      duration: 0.2495996
       messages: 
       output: 
       stacktrace: 
@@ -1562,13 +1562,87 @@ MonoBehaviour:
       parentId: 1013
       parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][CreeperTest][suite]
     - id: 1019
+      uniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][DataGameControllerTest][suite]
+      name: DataGameControllerTest
+      fullName: DataGameControllerTest
+      resultStatus: 1
+      duration: 0.8167774
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1060
+      parentUniqueId: '[Tests_Edit_Mode][C:/Users/Juan Antonio/Desktop/aaa/TFG_Unity/Library/ScriptAssemblies/Tests_Edit_Mode.dll][suite]'
+    - id: 1020
+      uniqueId: Tests_Edit_Mode.dll/DataGameControllerTest/[Tests_Edit_Mode][DataGameControllerTest.DataGameControllerFoundedTest]
+      name: DataGameControllerFoundedTest
+      fullName: DataGameControllerTest.DataGameControllerFoundedTest
+      resultStatus: 1
+      duration: 0.1475331
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][DataGameControllerTest][suite]
+    - id: 1021
+      uniqueId: Tests_Edit_Mode.dll/DataGameControllerTest/[Tests_Edit_Mode][DataGameControllerTest.DataGameControllerScriptFoundedTest]
+      name: DataGameControllerScriptFoundedTest
+      fullName: DataGameControllerTest.DataGameControllerScriptFoundedTest
+      resultStatus: 1
+      duration: 0.2561328
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][DataGameControllerTest][suite]
+    - id: 1022
+      uniqueId: Tests_Edit_Mode.dll/DataGameControllerTest/[Tests_Edit_Mode][DataGameControllerTest.DataManagementTest]
+      name: DataManagementTest
+      fullName: DataGameControllerTest.DataManagementTest
+      resultStatus: 1
+      duration: 0.4041718
+      messages: 
+      output: 'C:/Users/Juan Antonio/Desktop/aaa/TFG_Unity/Assets/gameData.json
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][DataGameControllerTest][suite]
+    - id: 1019
       uniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][EnemyTest][suite]
       name: EnemyTest
       fullName: EnemyTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 23.612171
       messages: 
-      output: 
+      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
+        This is not allowed.  MonoBehaviours can only be added using AddComponent().
+        Alternatively, your script can inherit from ScriptableObject or no base class
+        at all
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1581,8 +1655,8 @@ MonoBehaviour:
       uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.CheckEnemyMovingTest]
       name: CheckEnemyMovingTest
       fullName: EnemyTest.CheckEnemyMovingTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 2.4291
       messages: 
       output: 
       stacktrace: 
@@ -1598,8 +1672,8 @@ MonoBehaviour:
       uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.CrabFoundedTest]
       name: CrabFoundedTest
       fullName: EnemyTest.CrabFoundedTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.1599711
       messages: 
       output: 
       stacktrace: 
@@ -1615,8 +1689,8 @@ MonoBehaviour:
       uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.CrabIsEliminatedTest]
       name: CrabIsEliminatedTest
       fullName: EnemyTest.CrabIsEliminatedTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 2.4672678
       messages: 
       output: 
       stacktrace: 
@@ -1632,8 +1706,8 @@ MonoBehaviour:
       uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.MovesCrabThroughWaypoints]
       name: MovesCrabThroughWaypoints
       fullName: EnemyTest.MovesCrabThroughWaypoints
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.2605106
       messages: 
       output: 
       stacktrace: 
@@ -1649,8 +1723,8 @@ MonoBehaviour:
       uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.PlayerFoundedTest]
       name: PlayerFoundedTest
       fullName: EnemyTest.PlayerFoundedTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.1568395
       messages: 
       output: 
       stacktrace: 
@@ -1666,8 +1740,8 @@ MonoBehaviour:
       uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.ScriptCrabFoundedTest]
       name: ScriptCrabFoundedTest
       fullName: EnemyTest.ScriptCrabFoundedTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.2577283
       messages: 
       output: 
       stacktrace: 
@@ -1683,8 +1757,8 @@ MonoBehaviour:
       uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.ScriptPlayerFoundedTest]
       name: ScriptPlayerFoundedTest
       fullName: EnemyTest.ScriptPlayerFoundedTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.2570233
       messages: 
       output: 
       stacktrace: 
@@ -1700,8 +1774,8 @@ MonoBehaviour:
       uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.ScriptSetosoFoundedTest]
       name: ScriptSetosoFoundedTest
       fullName: EnemyTest.ScriptSetosoFoundedTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.256309
       messages: 
       output: 
       stacktrace: 
@@ -1713,12 +1787,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1019
       parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][EnemyTest][suite]
-    - id: 1028
-      uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.SetosoIsNotEliminatedTest]
-      name: SetosoIsNotEliminatedTest
-      fullName: EnemyTest.SetosoIsNotEliminatedTest
-      resultStatus: 0
-      duration: 0
+    - id: 1033
+      uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.ScriptSlimeFoundedTest]
+      name: ScriptSlimeFoundedTest
+      fullName: EnemyTest.ScriptSlimeFoundedTest
+      resultStatus: 1
+      duration: 0.2609264
       messages: 
       output: 
       stacktrace: 
@@ -1728,14 +1802,65 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1019
+      parentId: 1023
+      parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][EnemyTest][suite]
+    - id: 1031
+      uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.SetosoIsEliminatedTest]
+      name: SetosoIsEliminatedTest
+      fullName: EnemyTest.SetosoIsEliminatedTest
+      resultStatus: 1
+      duration: 7.9601173
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][EnemyTest][suite]
+    - id: 1033
+      uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.SlimeFoundedTest]
+      name: SlimeFoundedTest
+      fullName: EnemyTest.SlimeFoundedTest
+      resultStatus: 1
+      duration: 0.1552784
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
+      parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][EnemyTest][suite]
+    - id: 1035
+      uniqueId: Tests_Edit_Mode.dll/EnemyTest/[Tests_Edit_Mode][EnemyTest.SlimeIsEliminatedTest]
+      name: SlimeIsEliminatedTest
+      fullName: EnemyTest.SlimeIsEliminatedTest
+      resultStatus: 1
+      duration: 7.9643383
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
       parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][EnemyTest][suite]
     - id: 1008
       uniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][LifeSystemTest][suite]
       name: LifeSystemTest
       fullName: LifeSystemTest
       resultStatus: 1
-      duration: 1.9799333
+      duration: 1.9150815
       messages: 
       output: 
       stacktrace: 
@@ -1751,7 +1876,7 @@ MonoBehaviour:
       name: PlayerFoundedTest
       fullName: LifeSystemTest.PlayerFoundedTest
       resultStatus: 1
-      duration: 0.1637291
+      duration: 0.1493236
       messages: 
       output: 
       stacktrace: 
@@ -1768,7 +1893,7 @@ MonoBehaviour:
       name: PlayerTakeAllDamageTest
       fullName: LifeSystemTest.PlayerTakeAllDamageTest
       resultStatus: 1
-      duration: 1.2694385
+      duration: 1.2551574
       messages: 
       output: 
       stacktrace: 
@@ -1785,7 +1910,7 @@ MonoBehaviour:
       name: PlayerTakeDamageTest
       fullName: LifeSystemTest.PlayerTakeDamageTest
       resultStatus: 1
-      duration: 0.2704558
+      duration: 0.2552033
       messages: 
       output: 
       stacktrace: 
@@ -1802,7 +1927,7 @@ MonoBehaviour:
       name: ScriptPlayerFoundedTest
       fullName: LifeSystemTest.ScriptPlayerFoundedTest
       resultStatus: 1
-      duration: 0.2671089
+      duration: 0.2468259
       messages: 
       output: 
       stacktrace: 
@@ -1819,7 +1944,7 @@ MonoBehaviour:
       name: MainMenuTest
       fullName: MainMenuTest
       resultStatus: 1
-      duration: 1.0933821
+      duration: 1.2047098
       messages: 
       output: 
       stacktrace: 
@@ -1835,9 +1960,75 @@ MonoBehaviour:
       name: ButtonFoundedTest
       fullName: MainMenuTest.ButtonFoundedTest
       resultStatus: 1
-      duration: 0.2550443
+      duration: 0.3340838
       messages: 
-      output: 
+      output: 'True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1852,9 +2043,73 @@ MonoBehaviour:
       name: MainMenuLoadedTest
       fullName: MainMenuTest.MainMenuLoadedTest
       resultStatus: 1
-      duration: 0.1435176
+      duration: 0.1361463
       messages: 
-      output: 
+      output: 'True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1869,9 +2124,73 @@ MonoBehaviour:
       name: StartTest
       fullName: MainMenuTest.StartTest
       resultStatus: 1
-      duration: 0.6868523
+      duration: 0.7257573
       messages: 
-      output: 
+      output: 'True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1886,7 +2205,7 @@ MonoBehaviour:
       name: MapTest
       fullName: MapTest
       resultStatus: 1
-      duration: 8.280698
+      duration: 8.099594
       messages: 
       output: 
       stacktrace: 
@@ -1902,7 +2221,7 @@ MonoBehaviour:
       name: ButtonFoundedTest
       fullName: MapTest.ButtonFoundedTest
       resultStatus: 1
-      duration: 0.8223596
+      duration: 0.8590323
       messages: 
       output: 
       stacktrace: 
@@ -1919,7 +2238,7 @@ MonoBehaviour:
       name: EndCheckPointFoundedTest
       fullName: MapTest.EndCheckPointFoundedTest
       resultStatus: 1
-      duration: 0.6409906
+      duration: 0.6000086
       messages: 
       output: 
       stacktrace: 
@@ -1936,7 +2255,7 @@ MonoBehaviour:
       name: LoadNextSceneTest
       fullName: MapTest.LoadNextSceneTest
       resultStatus: 1
-      duration: 1.4651556
+      duration: 1.4459833
       messages: 
       output: 
       stacktrace: 
@@ -1953,7 +2272,7 @@ MonoBehaviour:
       name: MapOpenedTest
       fullName: MapTest.MapOpenedTest
       resultStatus: 1
-      duration: 1.1580476
+      duration: 1.1545151
       messages: 
       output: 
       stacktrace: 
@@ -1970,7 +2289,7 @@ MonoBehaviour:
       name: NextLevelNegativeTest
       fullName: MapTest.NextLevelNegativeTest
       resultStatus: 1
-      duration: 1.5024109
+      duration: 1.4603589
       messages: 
       output: 
       stacktrace: 
@@ -1987,7 +2306,7 @@ MonoBehaviour:
       name: NextLevelPositiveTest
       fullName: MapTest.NextLevelPositiveTest
       resultStatus: 1
-      duration: 1.5043712
+      duration: 1.4650143
       messages: 
       output: 
       stacktrace: 
@@ -2004,7 +2323,7 @@ MonoBehaviour:
       name: PlayerFoundedTest
       fullName: MapTest.PlayerFoundedTest
       resultStatus: 1
-      duration: 0.6378156
+      duration: 0.6034692
       messages: 
       output: 
       stacktrace: 
@@ -2021,7 +2340,7 @@ MonoBehaviour:
       name: ScriptEndCheckPointFoundedTest
       fullName: MapTest.ScriptEndCheckPointFoundedTest
       resultStatus: 1
-      duration: 0.2655593
+      duration: 0.2552997
       messages: 
       output: 
       stacktrace: 
@@ -2038,7 +2357,7 @@ MonoBehaviour:
       name: ScriptPlayerFoundedTest
       fullName: MapTest.ScriptPlayerFoundedTest
       resultStatus: 1
-      duration: 0.272147
+      duration: 0.245019
       messages: 
       output: 
       stacktrace: 
@@ -2055,7 +2374,7 @@ MonoBehaviour:
       name: PauseMenuTest
       fullName: PauseMenuTest
       resultStatus: 1
-      duration: 1.7168348
+      duration: 1.6614459
       messages: 
       output: 
       stacktrace: 
@@ -2071,9 +2390,153 @@ MonoBehaviour:
       name: ExitButtonMenuTest
       fullName: PauseMenuTest.ExitButtonMenuTest
       resultStatus: 1
-      duration: 0.5098937
+      duration: 0.5071482
       messages: 
-      output: 
+      output: 'True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+        True
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2088,7 +2551,7 @@ MonoBehaviour:
       name: OpenMenuTest
       fullName: PauseMenuTest.OpenMenuTest
       resultStatus: 1
-      duration: 0.7255212
+      duration: 0.6926484
       messages: 
       output: 
       stacktrace: 
@@ -2105,7 +2568,7 @@ MonoBehaviour:
       name: ResumeButtonMenuTest
       fullName: PauseMenuTest.ResumeButtonMenuTest
       resultStatus: 1
-      duration: 0.4728694
+      duration: 0.4528963
       messages: 
       output: 
       stacktrace: 
@@ -2122,7 +2585,7 @@ MonoBehaviour:
       name: PlayerTest
       fullName: PlayerTest
       resultStatus: 1
-      duration: 2.765233
+      duration: 2.708922
       messages: 
       output: 
       stacktrace: 
@@ -2138,7 +2601,7 @@ MonoBehaviour:
       name: PlayerIsCreatedProperlyTest
       fullName: PlayerTest.PlayerIsCreatedProperlyTest
       resultStatus: 1
-      duration: 0.1644531
+      duration: 0.15174
       messages: 
       output: 
       stacktrace: 
@@ -2155,7 +2618,7 @@ MonoBehaviour:
       name: PlayerJumpTest
       fullName: PlayerTest.PlayerJumpTest
       resultStatus: 1
-      duration: 0.4696726
+      duration: 0.4500279
       messages: 
       output: 
       stacktrace: 
@@ -2172,7 +2635,7 @@ MonoBehaviour:
       name: PlayerMoveLeftTest
       fullName: PlayerTest.PlayerMoveLeftTest
       resultStatus: 1
-      duration: 1.0621047
+      duration: 1.0488282
       messages: 
       output: 
       stacktrace: 
@@ -2189,7 +2652,7 @@ MonoBehaviour:
       name: PlayerMoveRightTest
       fullName: PlayerTest.PlayerMoveRightTest
       resultStatus: 1
-      duration: 1.0605668
+      duration: 1.0496197
       messages: 
       output: 
       stacktrace: 
@@ -2201,13 +2664,20 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1008
       parentUniqueId: Tests_Edit_Mode.dll/[Tests_Edit_Mode][PlayerTest][suite]
-    m_ResultText: PlayerTest (2,765s)
+    m_ResultText: 'EnemyTest (23,612s)
+
+      ---
+
+      You are trying to create
+      a MonoBehaviour using the ''new'' keyword.  This is not allowed.  MonoBehaviours
+      can only be added using AddComponent(). Alternatively, your script can inherit
+      from ScriptableObject or no base class at all'
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 286}
-      m_SelectedIDs: 7886f01e
-      m_LastClickedID: 519079544
-      m_ExpandedIDs: e8e4d88623c7c5a4a190a5b229470fcbb3c367019515cc047886f01e0b9fd22e19a2f233b5fdb9625b3e58657ad3a276ffffff7f
+      scrollPos: {x: 0, y: 338}
+      m_SelectedIDs: 29470fcb
+      m_LastClickedID: -888191191
+      m_ExpandedIDs: e8e4d88623c7c5a4a190a5b229470fcbedd3d0d8b3c367019515cc047886f01e0b9fd22e19a2f233b5fdb962ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2341,4 +2811,4 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25300
+  m_LastSelectedObjectID: 56776
